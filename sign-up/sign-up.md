@@ -64,10 +64,13 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 
 
 ## Step 2. Set Password
+No web request is made.
 
 ## Step 3. First & Last Name
+No web request is made.
 
 ## Step 4. Country & Birth Date
+No web request is made.
 
 
 
