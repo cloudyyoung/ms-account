@@ -3,6 +3,8 @@
 
 ## Step 1. Username Availability
 
+![JhxmsU.png](https://s1.ax1x.com/2020/04/28/JhxmsU.png)
+
 ### Request
 
 ```POST``` [https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
@@ -13,7 +15,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 ```
 ```
 {
-  "signInName": "shawn.mendersh@hotmail.com",
+  "signInName": "kid.irfan@hotmail.com",
   "uaid": "9b68be6acc1341f39c881b327b2ba228",
   "includeSuggestions": true,
   "uiflvr": 1001,
@@ -61,12 +63,15 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 
 
 ## Step 2. Set Password
+![Jhx3J1.png](https://s1.ax1x.com/2020/04/28/Jhx3J1.png)
 No web request is made.
 
 ## Step 3. First & Last Name
+![Jhx1iR.png](https://s1.ax1x.com/2020/04/28/Jhx1iR.png)
 No web request is made.
 
 ## Step 4. Country & Birth Date
+![JhxnLF.png](https://s1.ax1x.com/2020/04/28/JhxnLF.png)
 No web request is made.
 
 
@@ -83,9 +88,9 @@ No web request is made.
 
 ```
 {
-  "MemberName": "shawn.mendersh@hotmail.com",
+  "MemberName": "kid.irfan@hotmail.com",
   "CheckAvailStateMap": [
-    "shawn.mendersh@hotmail.com:undefined"
+    "kid.irfan@hotmail.com:undefined"
   ],
   "EvictionWarningShown": [],
   "UpgradeFlowToken": {},
@@ -118,6 +123,8 @@ No web request is made.
 ```
 
 ### Response 
+
+![Jhx8Rx.png](https://s1.ax1x.com/2020/04/28/Jhx8Rx.png)
 
 ```200``` Fail: Simple Password
 ```
@@ -161,6 +168,8 @@ No web request is made.
 
 ## Step 6. Captcha
 
+![JhxtsO.png](https://s1.ax1x.com/2020/04/28/JhxtsO.png)
+
 ### Request 1: Fetch captcha url
 
 ```GET``` [https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603](https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603)
@@ -191,9 +200,9 @@ No web request is made.
 
 ``` 
 {
-  "MemberName": "shawn.mendersh@outlook.com",
+  "MemberName": "kid.irfan@outlook.com",
   "CheckAvailStateMap": [
-    "shawn.mendersh@outlook.com:undefined"
+    "kid.irfan@outlook.com:undefined"
   ],
   "EvictionWarningShown": [],
   "UpgradeFlowToken": {},
