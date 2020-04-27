@@ -1,7 +1,7 @@
 
 # Sign Up
 
-## 1. Check Username Availability
+## Step 1. Check Username Availability
 
 ### Request
 
@@ -16,39 +16,41 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 #### Content
 ```
 {
-	"signInName":"shawn.mendersh@hotmail.com",
-	"uaid":"9b68be6acc1341f39c881b327b2ba228",
-	"includeSuggestions":true,
-	"uiflvr":1001,
-	"scid":100118,
-	"hpgid":"Signup_MemberNamePage_Client"
+  "signInName": "shawn.mendersh@hotmail.com",
+  "uaid": "9b68be6acc1341f39c881b327b2ba228",
+  "includeSuggestions": true,
+  "uiflvr": 1001,
+  "scid": 100118,
+  "hpgid": "Signup_MemberNamePage_Client"
 }
 ```
 
 ### Response
 
-Status Code ```200```
-
 #### Content (Successful)
 ```
 {
-    "apiCanary": "TdMFHHdnvxZ5H5+Tf2PQFkTARv9SXapV2fxvzCAHUiUS4peb2QQOgGgUUOY\/+KIBv+\/pjPOUWdac5DxmSJQjlvb2C1Z4ziFniHN9fFL2YGBBqH1j\/PoQmDSVYmwbqHd5Z1RoYIJVlIzeEAWsqwF0NU+6\/+wsRB0Tk\/sgmnHkQ2WGeauQICmJLgy5ySAYN3gDLc6czLalrj7y\/MeGZAYsZo3fVdO8MXzDDQ8wr5lNYTh6dto5bQ04S4BYs0TsC2NU:2:3c",
-    "telemetryContext": "5NPwR1QXEiFUguQDEyimrrmBgEYhYbvjAVwdlhYb\/i\/u+XikSLvSQpfUDL4CzK2CQjTwiDZFzvzsB2xiu\/AGk4FH2WYcHVUMpAGnQS5Ny45wiZ7vNXaNDrP91pTfMU68om8ukIu0nQ+PUUNrMjyAuzp1bi1c+kSGJQAJ1R7LhmP8xzt+xnmeTY87XSMA39Ax:2:3",
-    "isAvailable": true,
-    "nopaAllowed": false,
-    "type": "Live"
+  "apiCanary": "TdMFHHdnvxZ5H5+Tf2PQFkTARv9SXapV2fxvzCAHUiUS4peb2QQOgGgUUOY/+KIBv+/pjPOUWdac5DxmSJQjlvb2C1Z4ziFniHN9fFL2YGBBqH1j/PoQmDSVYmwbqHd5Z1RoYIJVlIzeEAWsqwF0NU+6/+wsRB0Tk/sgmnHkQ2WGeauQICmJLgy5ySAYN3gDLc6czLalrj7y/MeGZAYsZo3fVdO8MXzDDQ8wr5lNYTh6dto5bQ04S4BYs0TsC2NU:2:3c",
+  "telemetryContext": "5NPwR1QXEiFUguQDEyimrrmBgEYhYbvjAVwdlhYb/i/u+XikSLvSQpfUDL4CzK2CQjTwiDZFzvzsB2xiu/AGk4FH2WYcHVUMpAGnQS5Ny45wiZ7vNXaNDrP91pTfMU68om8ukIu0nQ+PUUNrMjyAuzp1bi1c+kSGJQAJ1R7LhmP8xzt+xnmeTY87XSMA39Ax:2:3",
+  "isAvailable": true,
+  "nopaAllowed": false,
+  "type": "Live"
 }
 ```
 
 #### Content (Fail)
 ```
 {
-    "apiCanary": "TJdA5VHuWJbowGlE\/wGUqWFAU6J5pajQCpFJQuCLEtpw+2HCeVjWERBVnOl+XFdEL+zV897wIzy1FFhFobdcKkv2BrvplJ7Btw6biyju9it7OHNtDfRy821PoMarWnrlQK0zyg1bjLNR9U9wFBfE95DXII5B1Fsw9uRyLJbEvyvxjcIzrukFEAL7if0zW2kiJ+oXG+IAOEXwR96NekeA5ZALRuqAo4P8dIuRL9tyqrioMG5eu3JDJ4NhivWQ700Y:2:3c",
-    "telemetryContext": "hjjXzFZIGH6\/lvF20lf6XrHsW0hYhygjadatNptwKx2Zhmo1t5mjpQU9V\/EHqBf7pNk4zdCnKdKDxoGAio9KQWhviEPuUPs4yLVIYV38imzdqV0TBcYLn1\/h72qTdHCaFsxiyKu+r0qDJ3hCr\/7nRf2qxXSW2I\/BQ0kmxrlHZKWjh6JMOQCsfHQpu3RtAVed:2:3",
-    "isAvailable": false,
-    "nopaAllowed": false,
-    "suggestions": ["cloudyyoung1@outlook.com", "cloudyyoung2020@outlook.com", "cloudyyoung1949@outlook.com"],
-    "type": "Live"
+  "apiCanary": "TJdA5VHuWJbowGlE/wGUqWFAU6J5pajQCpFJQuCLEtpw+2HCeVjWERBVnOl+XFdEL+zV897wIzy1FFhFobdcKkv2BrvplJ7Btw6biyju9it7OHNtDfRy821PoMarWnrlQK0zyg1bjLNR9U9wFBfE95DXII5B1Fsw9uRyLJbEvyvxjcIzrukFEAL7if0zW2kiJ+oXG+IAOEXwR96NekeA5ZALRuqAo4P8dIuRL9tyqrioMG5eu3JDJ4NhivWQ700Y:2:3c",
+  "telemetryContext": "hjjXzFZIGH6/lvF20lf6XrHsW0hYhygjadatNptwKx2Zhmo1t5mjpQU9V/EHqBf7pNk4zdCnKdKDxoGAio9KQWhviEPuUPs4yLVIYV38imzdqV0TBcYLn1/h72qTdHCaFsxiyKu+r0qDJ3hCr/7nRf2qxXSW2I/BQ0kmxrlHZKWjh6JMOQCsfHQpu3RtAVed:2:3",
+  "isAvailable": false,
+  "nopaAllowed": false,
+  "suggestions": [
+    "cloudyyoung1@outlook.com",
+    "cloudyyoung2020@outlook.com",
+    "cloudyyoung1949@outlook.com"
+  ],
+  "type": "Live"
 }
 ```
 
@@ -61,19 +63,19 @@ Status Code ```200```
 
 
 
-## 2. Set Password
+## Step 2. Set Password
 
-## 3. First & Last Name
+## Step 3. First & Last Name
 
-## 4. Country & Birth Date
-
-
+## Step 4. Country & Birth Date
 
 
 
 
 
-## 5. Create Account
+
+
+## Step 5. Create Account
 
 ### Request
 
@@ -82,53 +84,66 @@ Status Code ```200```
 #### Content
 ```
 {
-	"MemberName":"shawn.mendersh@hotmail.com",
-	"CheckAvailStateMap":
-		[
-			"shawn.mendersh@hotmail.com:undefined"
-		],
-	"EvictionWarningShown":[],
-	"UpgradeFlowToken":{},
-	"FirstName":"Shawn",
-	"LastName":"Mendersh",
-	"MemberNameChangeCount":1,
-	"MemberNameAvailableCount":1,
-	"MemberNameUnavailableCount":0,
-	"CipherValue":"/J80OLF7qh4dngswv75Ox6B78q/0v0nqXwkQjob3 9bnGBhE35IiCqAuGkpzkXX8FpBEl7nptFtidq1meZ71ySOsV6rBPBR8LbhjllaA/TugM9fjCAx2vFNWF5UuMTKr1Vjwi/MW DGUwotl2Tjd8Vic N3ZL D52IaakqBpKe9FhIdNknRks75UO3Vr2PBhW02TPsnrQu1wQgQhf7hBD26hRVONxksJ2prsyEKQR/i/GB6pTps nT0/oeCplStLYWoxsjrN8m3DjGk/wT/WwCz4a0TZlJTX1g8qgBzf90DYV7Bd/0 ow kdkQgNzSA09TUNncpZ2aaP0Lm8Xw3NMQ: =",
-	"SKI":"4B8F32B06B3633468A617C4D5781E6B301099447",
-	"BirthDate":"12:09:2007",
-	"Country":"CA",
-	"IsOptOutEmailDefault":false,
-	"IsOptOutEmailShown":true,
-	"IsOptOutEmail":false,
-	"LW":true,
-	"SiteId":"68692",
-	"IsRDM":0,
-	"WReply":null,
-	"ReturnUrl":null,
-	"SignupReturnUrl":null,
-	"uiflvr":1001,
-	"uaid":"9b68be6acc1341f39c881b327b2ba228",
-	"SuggestedAccountType":"EASI",
-	"SuggestionType":"Prefer",
-	"HFId":"c6ffdcb91e764c5c997e1b3a2b94216f",
-	"scid":100118,
-	"hpgid":"Signup_BirthdatePage_Client"
+  "MemberName": "shawn.mendersh@hotmail.com",
+  "CheckAvailStateMap": [
+    "shawn.mendersh@hotmail.com:undefined"
+  ],
+  "EvictionWarningShown": [],
+  "UpgradeFlowToken": {},
+  "FirstName": "Shawn",
+  "LastName": "Mendersh",
+  "MemberNameChangeCount": 1,
+  "MemberNameAvailableCount": 1,
+  "MemberNameUnavailableCount": 0,
+  "CipherValue": "/J80OLF7qh4dngswv75Ox6B78q/0v0nqXwkQjob3 9bnGBhE35IiCqAuGkpzkXX8FpBEl7nptFtidq1meZ71ySOsV6rBPBR8LbhjllaA/TugM9fjCAx2vFNWF5UuMTKr1Vjwi/MW DGUwotl2Tjd8Vic N3ZL D52IaakqBpKe9FhIdNknRks75UO3Vr2PBhW02TPsnrQu1wQgQhf7hBD26hRVONxksJ2prsyEKQR/i/GB6pTps nT0/oeCplStLYWoxsjrN8m3DjGk/wT/WwCz4a0TZlJTX1g8qgBzf90DYV7Bd/0 ow kdkQgNzSA09TUNncpZ2aaP0Lm8Xw3NMQ: =",
+  "SKI": "4B8F32B06B3633468A617C4D5781E6B301099447",
+  "BirthDate": "12:09:2007",
+  "Country": "CA",
+  "IsOptOutEmailDefault": false,
+  "IsOptOutEmailShown": true,
+  "IsOptOutEmail": false,
+  "LW": true,
+  "SiteId": "68692",
+  "IsRDM": 0,
+  "WReply": null,
+  "ReturnUrl": null,
+  "SignupReturnUrl": null,
+  "uiflvr": 1001,
+  "uaid": "9b68be6acc1341f39c881b327b2ba228",
+  "SuggestedAccountType": "EASI",
+  "SuggestionType": "Prefer",
+  "HFId": "c6ffdcb91e764c5c997e1b3a2b94216f",
+  "scid": 100118,
+  "hpgid": "Signup_BirthdatePage_Client"
 }
 ```
 
 ### Response 
 
-Status Code ```200```
-
 #### Content (Fail: Simple Password)
 ```
-{"error":{"code":"1217","data":"","field":"password","stackTrace":"","telemetryContext":"a\/9D6eWijs\/McVi4BIGGLXYDaPKXeDEANcpE7vLStonUw8cJG3lQnhUfoGZdJwVHeYmr1rqum0QZxD8OlxQCsivsVBga3+UhxAdIBskUzRWrn2c9c+D7ifFg0sEiIk+YUkXnOZ\/7oT\/Md5FiGoxn3a6UEhtZDpVDQvry82thE+1KuwCAil5skS138v\/PtR+AjXMam3+Q66L5uPaJxdS+r9Dtn2z\/JnVq65nUEY7jVAUbObYeb7VbLbJgFn+HIO8\/ylqEP7ZPcLinsuhbEd2MvfE8G1og8kSf0AkmwiUw1IEFjQfj93VkNFRHJxmrYV5XLb8FZkMZXL9wpgAsGq2KVK57Pz6yiIp0qH8yUDYICQRjPcCtSjAL5SqT5ZPyH4ja\/KaQ9ikvAd0ytsaVl7vXK6eL1UnrEgkE2vO+FBpVTcE\/YeTOiJloCzceVxbGZJz5hdrzj1b8STNwBom+CsWWcqsKaBubh8gCbz29WgRG59NcRYL6NNlNWlrmudsh1DpWwmx\/cOvL0I2uH8RHxajxII\/wwT97I7AP5TSJFW1l9yM=:2:3"}}
+{
+  "error": {
+    "code": "1217",
+    "data": "",
+    "field": "password",
+    "stackTrace": "",
+    "telemetryContext": "a/9D6eWijs/McVi4BIGGLXYDaPKXeDEANcpE7vLStonUw8cJG3lQnhUfoGZdJwVHeYmr1rqum0QZxD8OlxQCsivsVBga3+UhxAdIBskUzRWrn2c9c+D7ifFg0sEiIk+YUkXnOZ/7oT/Md5FiGoxn3a6UEhtZDpVDQvry82thE+1KuwCAil5skS138v/PtR+AjXMam3+Q66L5uPaJxdS+r9Dtn2z/JnVq65nUEY7jVAUbObYeb7VbLbJgFn+HIO8/ylqEP7ZPcLinsuhbEd2MvfE8G1og8kSf0AkmwiUw1IEFjQfj93VkNFRHJxmrYV5XLb8FZkMZXL9wpgAsGq2KVK57Pz6yiIp0qH8yUDYICQRjPcCtSjAL5SqT5ZPyH4ja/KaQ9ikvAd0ytsaVl7vXK6eL1UnrEgkE2vO+FBpVTcE/YeTOiJloCzceVxbGZJz5hdrzj1b8STNwBom+CsWWcqsKaBubh8gCbz29WgRG59NcRYL6NNlNWlrmudsh1DpWwmx/cOvL0I2uH8RHxajxII/wwT97I7AP5TSJFW1l9yM=:2:3"
+  }
+}
 ```
 
 #### Content (Fail: Captcha)
 ```
-{"error":{"code":"1040","data":"","field":"hip","stackTrace":"","telemetryContext":"FL1mtRcEgJgheBZmyOAJwedFztF0OQkyoQlIi91HhDWmsn0q3YQmKgn+CzfSizOwjBlMeIwuFrRDvblcuLfvo2CC+JRcq78bV4P2CXceJR4U\/sAPKJG\/xtVXIfqrxDX8GKVazkX2u0Gwz3UGC10+fMg\/S3QZE0pygcG4O9HysZqTbpDXcyYkgvD7X0EKiEwPmlPfKhAJws2OBDIY774rLLjlRg8IATAkqhlIQ6i1GIv9S+ULnkuSVN1D9sUNKlQcMlXFf9i0YiJdb7tTx0H\/uj9lLejmrWEDgSPsy1mNYDXg6l31g\/UjLuBb6epWDrHsg9Qxhk\/NAlxYKrWSXlrkBZyIDoj9pi09qqAfcH9WNl8AXvXFaAeyct0ItfvCiDITaBC6pStV3gYRb4vVK1E5ab4ujCZtqAxfoAvOxdQvEbFHrPYXkkdNHxkg4rX8+s6RAZxx7RZys2viJOj8oBq1AM+jnov8vAMce2M5c05W4Sm2XXC38dhXbNt9\/Ffmp9A2shpYEe3JGcse\/U00FpB5hb9iul5\/jNQSFilumyqV0BEuj1DiORocoJr9aB9Ql509:2:3"}}
+{
+  "error": {
+    "code": "1040",
+    "data": "",
+    "field": "hip",
+    "stackTrace": "",
+    "telemetryContext": "FL1mtRcEgJgheBZmyOAJwedFztF0OQkyoQlIi91HhDWmsn0q3YQmKgn+CzfSizOwjBlMeIwuFrRDvblcuLfvo2CC+JRcq78bV4P2CXceJR4U/sAPKJG/xtVXIfqrxDX8GKVazkX2u0Gwz3UGC10+fMg/S3QZE0pygcG4O9HysZqTbpDXcyYkgvD7X0EKiEwPmlPfKhAJws2OBDIY774rLLjlRg8IATAkqhlIQ6i1GIv9S+ULnkuSVN1D9sUNKlQcMlXFf9i0YiJdb7tTx0H/uj9lLejmrWEDgSPsy1mNYDXg6l31g/UjLuBb6epWDrHsg9Qxhk/NAlxYKrWSXlrkBZyIDoj9pi09qqAfcH9WNl8AXvXFaAeyct0ItfvCiDITaBC6pStV3gYRb4vVK1E5ab4ujCZtqAxfoAvOxdQvEbFHrPYXkkdNHxkg4rX8+s6RAZxx7RZys2viJOj8oBq1AM+jnov8vAMce2M5c05W4Sm2XXC38dhXbNt9/Ffmp9A2shpYEe3JGcse/U00FpB5hb9iul5/jNQSFilumyqV0BEuj1DiORocoJr9aB9Ql509:2:3"
+  }
+}
 ```
 
 
@@ -145,14 +160,13 @@ Status Code ```200```
 
 
 
-## 6. CAPTCHA
+## Step 6. CAPTCHA
 
-### Request
+### Request 1
 
 ```GET``` [https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603](https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603)
 
-### Response
-Status Code ```200``` 
+### Response 1
 
 #### Content
 HIPAMFE
@@ -161,11 +175,11 @@ HIPAMFE
 1. The return content is a JS file code. Find hipChallengeUrl in the file.
 
 
-### Request
+### Request 2
 
 ```GET``` [https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE](https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE)
 
-### Response
+### Response 2
 Status Code ```200```
 
 #### Content
@@ -177,7 +191,7 @@ The captcha image
 
 
 
-## 7. Sign Up
+## Step 7. Sign Up
 
 ### Request
 ```POST``` [https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
@@ -185,44 +199,40 @@ The captcha image
 #### Content
 ``` 
 {
-   "MemberName":"shawn.mendersh@outlook.com",
-   "CheckAvailStateMap":[
-      "shawn.mendersh@outlook.com:undefined"
-   ],
-   "EvictionWarningShown":[
-
-   ],
-   "UpgradeFlowToken":{
-
-   },
-   "FirstName":"Shawn",
-   "LastName":"Mendersh",
-   "MemberNameChangeCount":1,
-   "MemberNameAvailableCount":1,
-   "MemberNameUnavailableCount":0,
-   "CipherValue":"gfISD7Tn60Xwms2ahhskvzknR+0xZJg+qDvdDgIYIAlH2iQ0ZvonJr8eahjx8+0gs3t6IvOlD9cpQ3mZo5w1mhmPaQWtWueaZh8h9QY7S2OPEWCaVtN+UKhnqedu97dTgkATz0izXDC9imR14uxDRIWaTJQuUTX39nmBN/fe5p7h/9OfogSxueQuLUp8YMYZPDhTdqzY1LVYG2Dya27xLRcGUvnMiOZhITGHpRyEIPgAua9KefhV9vUtk2Ul7itS5sKbagIed9vE8h1g/VMgvk8nLji6Ti4X8xoMh+5VNuR0eNconaevloWs/ivuV1P05A6yahdb+t7To4IWPvUsmQ==",
-   "SKI":"4B8F32B06B3633468A617C4D5781E6B301099447",
-   "BirthDate":"12:12:2004",
-   "Country":"US",
-   "IsOptOutEmailDefault":false,
-   "IsOptOutEmailShown":true,
-   "IsOptOutEmail":true,
-   "LW":true,
-   "SiteId":"68692",
-   "IsRDM":0,
-   "WReply":null,
-   "ReturnUrl":null,
-   "SignupReturnUrl":null,
-   "uiflvr":1001,
-   "uaid":"9b68be6acc1341f39c881b327b2ba228",
-   "SuggestedAccountType":"EASI",
-   "SuggestionType":"Prefer",
-   "HFId":"c6ffdcb91e764c5c997e1b3a2b94216f",
-   "HType":"visual",
-   "HSId":"15041",
-   "HId":"SCU.b2750a93a7054e1ba9d79d00df56a6bf",
-   "HSol":"WKSXGJS",
-   "scid":100118,
-   "hpgid":"Signup_HipPage_Client"
+  "MemberName": "shawn.mendersh@outlook.com",
+  "CheckAvailStateMap": [
+    "shawn.mendersh@outlook.com:undefined"
+  ],
+  "EvictionWarningShown": [],
+  "UpgradeFlowToken": {},
+  "FirstName": "Shawn",
+  "LastName": "Mendersh",
+  "MemberNameChangeCount": 1,
+  "MemberNameAvailableCount": 1,
+  "MemberNameUnavailableCount": 0,
+  "CipherValue": "gfISD7Tn60Xwms2ahhskvzknR+0xZJg+qDvdDgIYIAlH2iQ0ZvonJr8eahjx8+0gs3t6IvOlD9cpQ3mZo5w1mhmPaQWtWueaZh8h9QY7S2OPEWCaVtN+UKhnqedu97dTgkATz0izXDC9imR14uxDRIWaTJQuUTX39nmBN/fe5p7h/9OfogSxueQuLUp8YMYZPDhTdqzY1LVYG2Dya27xLRcGUvnMiOZhITGHpRyEIPgAua9KefhV9vUtk2Ul7itS5sKbagIed9vE8h1g/VMgvk8nLji6Ti4X8xoMh+5VNuR0eNconaevloWs/ivuV1P05A6yahdb+t7To4IWPvUsmQ==",
+  "SKI": "4B8F32B06B3633468A617C4D5781E6B301099447",
+  "BirthDate": "12:12:2004",
+  "Country": "US",
+  "IsOptOutEmailDefault": false,
+  "IsOptOutEmailShown": true,
+  "IsOptOutEmail": true,
+  "LW": true,
+  "SiteId": "68692",
+  "IsRDM": 0,
+  "WReply": null,
+  "ReturnUrl": null,
+  "SignupReturnUrl": null,
+  "uiflvr": 1001,
+  "uaid": "9b68be6acc1341f39c881b327b2ba228",
+  "SuggestedAccountType": "EASI",
+  "SuggestionType": "Prefer",
+  "HFId": "c6ffdcb91e764c5c997e1b3a2b94216f",
+  "HType": "visual",
+  "HSId": "15041",
+  "HId": "SCU.b2750a93a7054e1ba9d79d00df56a6bf",
+  "HSol": "WKSXGJS",
+  "scid": 100118,
+  "hpgid": "Signup_HipPage_Client"
 }
 ```
