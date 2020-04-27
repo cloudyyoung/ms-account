@@ -1,7 +1,7 @@
 
 # Sign Up
 
-## Step 1. Check Username Availability
+## Step 1. Username Availability
 
 ### Request
 
@@ -159,7 +159,7 @@ No web request is made.
 
 
 
-## Step 6. CAPTCHA
+## Step 6. Captcha
 
 ### Request 1: Fetch captcha url
 
