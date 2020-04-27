@@ -24,7 +24,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 
 ### Response
 
-#### Content (Successful)
+```200``` Successful
 ```
 {
   "apiCanary": "TdMFHHdnvxZ5H5+Tf2PQFkTARv9SXapV2fxvzCAHUiUS4peb2QQOgGgUUOY/+KIBv+/pjPOUWdac5DxmSJQjlvb2C1Z4ziFniHN9fFL2YGBBqH1j/PoQmDSVYmwbqHd5Z1RoYIJVlIzeEAWsqwF0NU+6/+wsRB0Tk/sgmnHkQ2WGeauQICmJLgy5ySAYN3gDLc6czLalrj7y/MeGZAYsZo3fVdO8MXzDDQ8wr5lNYTh6dto5bQ04S4BYs0TsC2NU:2:3c",
@@ -35,7 +35,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 }
 ```
 
-#### Content (Fail)
+```200``` Fail
 ```
 {
   "apiCanary": "TJdA5VHuWJbowGlE/wGUqWFAU6J5pajQCpFJQuCLEtpw+2HCeVjWERBVnOl+XFdEL+zV897wIzy1FFhFobdcKkv2BrvplJ7Btw6biyju9it7OHNtDfRy821PoMarWnrlQK0zyg1bjLNR9U9wFBfE95DXII5B1Fsw9uRyLJbEvyvxjcIzrukFEAL7if0zW2kiJ+oXG+IAOEXwR96NekeA5ZALRuqAo4P8dIuRL9tyqrioMG5eu3JDJ4NhivWQ700Y:2:3c",
@@ -51,7 +51,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 }
 ```
 
-#### Note
+### Note
 1. Canary & Cookies in header are really important. uaid in url and json are not important.
 
 
@@ -119,7 +119,7 @@ No web request is made.
 
 ### Response 
 
-#### Content (Fail: Simple Password)
+```200``` Fail: Simple Password
 ```
 {
   "error": {
@@ -132,7 +132,7 @@ No web request is made.
 }
 ```
 
-#### Content (Fail: Captcha)
+```200``` Fail: Captcha
 ```
 {
   "error": {
@@ -146,7 +146,7 @@ No web request is made.
 ```
 
 
-#### Note 
+### Note 
 1. Sign up data is encrypted using RAS
 2. The RSA encryption key is in the html, var Key
 3. The random number too, var randomNum
@@ -161,23 +161,21 @@ No web request is made.
 
 ## Step 6. CAPTCHA
 
-### Request 1
+### Request 1: Fetch captcha url
 
 ```GET``` [https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603](https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603)
 
 ### Response 1
-HIPAMFE
-
-#### Note
-1. The return content is a JS file code. Find hipChallengeUrl in the file.
+```200``` The return content is a JS file ```HIPAMFE```. Find hipChallengeUrl in the file.
 
 
-### Request 2
+### Request 2: Fetch captcha image
 
 ```GET``` [https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE](https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE)
 
 ### Response 2
-The captcha image
+```200``` The catpcha image
+![Jhv02V.png](https://s1.ax1x.com/2020/04/28/Jhv02V.png)
 
 
 
@@ -185,7 +183,8 @@ The captcha image
 
 
 
-## Step 7. Sign Up
+
+## Step 7. Create Account
 
 ### Request
 ```POST``` [https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
