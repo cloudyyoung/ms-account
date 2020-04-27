@@ -24,7 +24,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 
 ### Response
 
-```200``` Successful
+```200``` Successful: Username available
 ```
 {
   "apiCanary": "TdMFHHdnvxZ5H5+Tf2PQFkTARv9SXapV2fxvzCAHUiUS4peb2QQOgGgUUOY/+KIBv+/pjPOUWdac5DxmSJQjlvb2C1Z4ziFniHN9fFL2YGBBqH1j/PoQmDSVYmwbqHd5Z1RoYIJVlIzeEAWsqwF0NU+6/+wsRB0Tk/sgmnHkQ2WGeauQICmJLgy5ySAYN3gDLc6czLalrj7y/MeGZAYsZo3fVdO8MXzDDQ8wr5lNYTh6dto5bQ04S4BYs0TsC2NU:2:3c",
@@ -35,7 +35,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 }
 ```
 
-```200``` Fail
+```200``` Fail: Username existing
 ```
 {
   "apiCanary": "TJdA5VHuWJbowGlE/wGUqWFAU6J5pajQCpFJQuCLEtpw+2HCeVjWERBVnOl+XFdEL+zV897wIzy1FFhFobdcKkv2BrvplJ7Btw6biyju9it7OHNtDfRy821PoMarWnrlQK0zyg1bjLNR9U9wFBfE95DXII5B1Fsw9uRyLJbEvyvxjcIzrukFEAL7if0zW2kiJ+oXG+IAOEXwR96NekeA5ZALRuqAo4P8dIuRL9tyqrioMG5eu3JDJ4NhivWQ700Y:2:3c",
@@ -52,7 +52,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 ```
 
 ### Note
-1. Canary & Cookies in header are really important. uaid in url and json are not important.
+1. ```Canary``` & ```Cookies``` in header are really important. ```uaid``` in url and json are not important.
 
 
 
