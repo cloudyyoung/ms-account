@@ -25,6 +25,11 @@ set-cookie: uaid=1bfceb8feaba489d910d560ee7d5efa7; domain=login.live.com; Secure
 set-cookie: MSPRequ=id=68692&lt=1588049277&co=1; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly
 ```
 
+### Note
+1. Request 1 return JS contains `apiCanary` and needs unicode decode for further use
+2. Though officially `canary` changes for each request(don't know why/how), it is valid to use that fixed `canary` from Request 1
+
+
 ## Step 1. Username Availability
 
 ![JhxmsU.png](https://s1.ax1x.com/2020/04/28/JhxmsU.png)
