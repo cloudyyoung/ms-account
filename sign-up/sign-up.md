@@ -1,6 +1,39 @@
 
 # Sign Up
 
+## Error Code
+- `1043`: hipValidationError
+- `1040`: hipNeeded
+- `1041`: hipEnforcementNeeded
+- `1042`: hipSMSNeeded
+- `450`: dailyLimitIDsReached
+- `1304`: oneTimeCodeInvalid
+- `1324`: verificationSltInvalid
+- `1058`: membernameTaken
+- `1117`: domainNotAllowed
+- `1181`: domainIsReserved
+- `403`: forbiddenWord
+- `1002`: passwordIncorrect
+- `1009`: passwordConflict
+- `1062`: invalidEmailFormat
+- `1063`: invalidPhoneFormat
+- `1039`: invalidBirthDate
+- `1243`: invalidGender
+- `1240`: invalidFirstName
+- `1241`: invalidLastName
+- `1204`: maximumOTTDailyError
+- `1217`: bannedPassword
+- `1246`: proofAlreadyExistsError
+- `1184`: domainExistsInAad
+- `1185`: domainExistsInAadSupportedLogin
+- `1242`: membernameTakenEasi
+- `1052`: membernameTakenPhone
+- `1220`: signupBlocked
+- `1064`: invalidMemberNameFormat
+- `1330`: passwordRequired
+- `1256`: emailMustStartWithLetter
+- `1334`: evictionWarningRequired
+
 There is a `Required fields` section for each part. To make a successful request, fields have to be provided properly. Fields not listed within are optional/not occuring errors.
 
 ## Step 0. Initialize
