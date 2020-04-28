@@ -5,29 +5,20 @@ There is a `Required fields` section for each part. To make a successful request
 
 ## Step 0. Initialize
 
-### Request 1: Page
+### Request
 `GET` [https://signup.live.com](https://signup.live.com)
 
-### Response 1
+### Response 
 `302`
 ```
 set-cookie: amsc=XAXV4GCwzzGyJvTyqfWpdS8/Vd3LD7q/PLZIMp0gFxL7LvbCd37mA80X9TyN8HqBHYFJZxhyRjITwzURLEgNhRnjfZyfwuWJYh8oLLGijbFp74lr3+G3+VVkR7lw69PglBJL5D7uHVD9PbPHLseYjD1Dkdeo4Jw/fjtTLJ0aS/fCV4UJ5bHBCQLVT91OvvoD9xT8FECKaWR/qxk91EJB7ELv5E7nIplj7b6/ZyxE/wN8lO85sQTF5LKPz0jrU0HS:2:3c; domain=.live.com; path=/; secure; HttpOnly; SameSite=None
 ```
 Returns content [main-part1.js](main-part1.js).
 
-### Request 2: SRF
-`GET` [https://login.live.com/login.srf](https://login.live.com/login.srf)
-
-### Response 2
-`302`
-```
-set-cookie: uaid=1bfceb8feaba489d910d560ee7d5efa7; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly
-set-cookie: MSPRequ=id=68692&lt=1588049277&co=1; domain=login.live.com; Secure; path=/; SameSite=None; HttpOnly
-```
-
 ### Note
 1. Request 1 return JS contains `apiCanary` and needs unicode decode for further use
 2. Though officially `canary` changes for each request(don't know why/how), it is valid to use that fixed `canary` from Request 1
+3. Return content contains most required fields, such as `uaid`, `fid`, etc
 
 
 ## Step 1. Username Availability
