@@ -125,6 +125,9 @@ No web request is made.
 }
 ```
 
+#### Required Fields
+- Request body
+
 ### Response 
 
 ![Jhx8Rx.png](https://s1.ax1x.com/2020/04/28/Jhx8Rx.png)
