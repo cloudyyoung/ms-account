@@ -1,7 +1,7 @@
 
 # Sign Up
 
-There is a `Required fields` section for each part. Fields not listed within are optional/not occuring errors.
+There is a `Required fields` section for each part. To make a successful request, fields have to be provided properly. Fields not listed within are optional/not occuring errors.
 
 ## Step 1. Username Availability
 
