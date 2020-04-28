@@ -194,12 +194,19 @@ No web request is made.
 
 `GET` [https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE](https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE)
 
+#### Required Fields
+- `hid`
+- `fid`
+- `type`
+
 ### Response 2
 `200` Returns captcha image   
 ![Jhv02V.png](https://s1.ax1x.com/2020/04/28/Jhv02V.png)
 
+`400` Bad Request
 
-
+### Note
+1. Captcha url is from the returned content in Request 1.
 
 
 
