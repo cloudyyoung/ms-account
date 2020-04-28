@@ -177,7 +177,7 @@ No web request is made.
 `GET` [https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603](https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603)
 
 
-Required fields:
+#### Required fields
 - `fid`: FlowId
 - `id`: ScenarioId
 - `type`: Hip challenge type, could be `visual` or `audio`
