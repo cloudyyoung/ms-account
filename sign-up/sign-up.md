@@ -1,6 +1,7 @@
 
 # Sign Up
 
+There is a `Required fields` section for each part. Fields not listed within are optional/not occuring errors.
 
 ## Step 1. Username Availability
 
@@ -8,11 +9,11 @@
 
 ### Request
 
-`POST` [https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
+`POST` [https://signup.live.com/API/CheckAvailableSigninNames](https://signup.live.com/API/CheckAvailableSigninNames)
 
 ```
-Canary: vWZvbb3OK86BIkFlOR7jnW5mfuKVen3mJ6FcCLCFWEXyhGMJFJr52uOF1MLSOwD3Y1q/z5+6xVFGBWVTse5Ii3lexj1fKRUeMFPxTiIdGMxfOaWSJm9QxZ76CRVqV6Lp9Am2N9J6WGv/wVoUFPEoZn8rK9upRNi/QgoizLA42hN7w8aKf1x6YvVY0wBpmdEdFEo3Yw2uxHKL7V0dIB4tkRxVRyCC7qMNt/jGSvPVU6IXGQedeTG5DKrGo4iJRPVi:2:3c
-Cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5RaMsDlVCv+UCt1tU1T3UVLpvLRe6mzlPAthdFHXb2arstQ0UzVXQz39Ve0D3jcLx79Ww8gppsI+Kps7majqE3iUVz0BoWaX8QHPMtK2S0FxXo0NYKatXslS5RgzpYCGSZXcIsGl2l2d9CWkp4X7awvlA+XuCUwqXpQ9/r9WcFG6IIw3aH+/PWvGJYazmsMIdkJex03/zdYI3N8O0+KUWgOwH2k4y4RoLzq8DLLi6ewcJCQMGpac8GLpRz/Arpr:2:3c; clrc={%2218379%22%3a[%22d7PFy/1V%22%2c%22+VC+x0R6%22%2c%22fwRyxlqk%22%2c%22P2yuZgWD%22]}
+canary: vWZvbb3OK86BIkFlOR7jnW5mfuKVen3mJ6FcCLCFWEXyhGMJFJr52uOF1MLSOwD3Y1q/z5+6xVFGBWVTse5Ii3lexj1fKRUeMFPxTiIdGMxfOaWSJm9QxZ76CRVqV6Lp9Am2N9J6WGv/wVoUFPEoZn8rK9upRNi/QgoizLA42hN7w8aKf1x6YvVY0wBpmdEdFEo3Yw2uxHKL7V0dIB4tkRxVRyCC7qMNt/jGSvPVU6IXGQedeTG5DKrGo4iJRPVi:2:3c
+cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5RaMsDlVCv+UCt1tU1T3UVLpvLRe6mzlPAthdFHXb2arstQ0UzVXQz39Ve0D3jcLx79Ww8gppsI+Kps7majqE3iUVz0BoWaX8QHPMtK2S0FxXo0NYKatXslS5RgzpYCGSZXcIsGl2l2d9CWkp4X7awvlA+XuCUwqXpQ9/r9WcFG6IIw3aH+/PWvGJYazmsMIdkJex03/zdYI3N8O0+KUWgOwH2k4y4RoLzq8DLLi6ewcJCQMGpac8GLpRz/Arpr:2:3c; clrc={%2218379%22%3a[%22d7PFy/1V%22%2c%22+VC+x0R6%22%2c%22fwRyxlqk%22%2c%22P2yuZgWD%22]}
 ```
 ```
 {
@@ -24,6 +25,11 @@ Cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
   "hpgid": "Signup_MemberNamePage_Client"
 }
 ```
+
+#### Required fields
+- `canary` in header
+- `amsc` in `cookie` in header
+- `signInName` in content
 
 ### Response
 
@@ -55,7 +61,7 @@ Cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 ```
 
 ### Note
-1. `Canary` & `Cookies` in header are really important. `uaid` in json and query in url are not important.
+1. `canary` & `cookie` in header are really important. `uaid` in json and query in url are not important.
 
 
 
