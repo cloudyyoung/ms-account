@@ -17,7 +17,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 ```
 ```
 {
-  "signInName": "kid.irfan@hotmail.com",
+  "signInName": "kid.irfan@outlook.com",
   "uaid": "9b68be6acc1341f39c881b327b2ba228",
   "includeSuggestions": true,
   "uiflvr": 1001,
@@ -87,13 +87,13 @@ No web request is made.
 
 ### Request
 
-`POST` [https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
+`POST` [https://signup.live.com/API/CreateAccount](https://signup.live.com/API/CreateAccount)
 
 ```
 {
-  "MemberName": "kid.irfan@hotmail.com",
+  "MemberName": "kid.irfan@outlook.com",
   "CheckAvailStateMap": [
-    "kid.irfan@hotmail.com:undefined"
+    "kid.irfan@outlook.com:undefined"
   ],
   "EvictionWarningShown": [],
   "UpgradeFlowToken": {},
@@ -160,7 +160,8 @@ No web request is made.
 1. Sign up data is encrypted using RAS
 2. The RSA encryption key is in the html, var Key
 3. The random number too, var randomNum
-4. Encrypt file [lightweightsignuppackage.js]( lightweightsignuppackage.js)
+4. Encryption algorithm file [lightweightsignuppackage.js]( lightweightsignuppackage.js)
+5. Encrypted field is called `CipherValue` in content
 
 
 
