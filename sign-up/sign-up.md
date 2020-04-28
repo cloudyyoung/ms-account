@@ -145,7 +145,7 @@ No web request is made.
 }
 ```
 
-`200` Fail: Captcha
+`200` Fail: Need Captcha
 ```
 {
   "error": {
