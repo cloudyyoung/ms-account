@@ -157,7 +157,7 @@ No web request is made.
 1. Sign up data is encrypted using RAS
 2. The RSA encryption key is in the html, var Key
 3. The random number too, var randomNum
-4. Encrypt file[ lightweightsignuppackage.js]( lightweightsignuppackage.js)
+4. Encrypt file [lightweightsignuppackage.js]( lightweightsignuppackage.js)
 
 
 
