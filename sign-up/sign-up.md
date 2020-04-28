@@ -1,6 +1,10 @@
 
 # Sign Up
 
+## Terminology
+
+```fid```: FlowId
+
 ## Step 1. Username Availability
 
 ![JhxmsU.png](https://s1.ax1x.com/2020/04/28/JhxmsU.png)
@@ -54,7 +58,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 ```
 
 ### Note
-1. ```Canary``` & ```Cookies``` in header are really important. ```uaid``` in url and json are not important.
+1. ```Canary``` & ```Cookies``` in header are really important. ```uaid``` in json and query in url are not important.
 
 
 
