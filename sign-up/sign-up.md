@@ -13,7 +13,7 @@ There is a `Required fields` section for each part. To make a successful request
 ```
 set-cookie: amsc=XAXV4GCwzzGyJvTyqfWpdS8/Vd3LD7q/PLZIMp0gFxL7LvbCd37mA80X9TyN8HqBHYFJZxhyRjITwzURLEgNhRnjfZyfwuWJYh8oLLGijbFp74lr3+G3+VVkR7lw69PglBJL5D7uHVD9PbPHLseYjD1Dkdeo4Jw/fjtTLJ0aS/fCV4UJ5bHBCQLVT91OvvoD9xT8FECKaWR/qxk91EJB7ELv5E7nIplj7b6/ZyxE/wN8lO85sQTF5LKPz0jrU0HS:2:3c; domain=.live.com; path=/; secure; HttpOnly; SameSite=None
 ```
-Returns content [main-part1.js](main-part1.js).
+Returns content are [main-part1.js](main-part1.js) and [main-part2.js](main-part2.js).
 
 ### Note
 1. Request 1 return JS contains `apiCanary` and needs unicode decode for further use
@@ -179,10 +179,11 @@ No web request is made.
 
 ### Note 
 1. Sign up data is encrypted using RAS
-2. The RSA encryption key is in the html, var Key
-3. The random number too, var randomNum
+2. The RSA encryption key is in the html, var `Key`
+3. The random number too, var `randomNum`
 4. Encryption algorithm file [lightweightsignuppackage.js]( lightweightsignuppackage.js)
 5. Encrypted field is called `CipherValue` in content
+6. `SKI` and `Key` can be found in [main-part2.js](main-part2.js)
 
 
 
