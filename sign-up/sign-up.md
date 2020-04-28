@@ -157,7 +157,7 @@ No web request is made.
 1. Sign up data is encrypted using RAS
 2. The RSA encryption key is in the html, var Key
 3. The random number too, var randomNum
-4. Encrypt file lightweightsignuppackage.js
+4. Encrypt file[ lightweightsignuppackage.js]( lightweightsignuppackage.js)
 
 
 
@@ -175,7 +175,8 @@ No web request is made.
 ```GET``` [https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603](https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603)
 
 ### Response 1
-```200``` The return content is a JS file ```HIPAMFE```. Find hipChallengeUrl in the file.
+```200``` The return content is [HIPAMFE.js](HIPAMFE.js). Find hipChallengeUrl in the file.
+
 
 
 ### Request 2: Fetch captcha image
