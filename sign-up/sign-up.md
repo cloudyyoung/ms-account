@@ -13,6 +13,7 @@ There is a `Required fields` section for each part. To make a successful request
 ```
 set-cookie: amsc=XAXV4GCwzzGyJvTyqfWpdS8/Vd3LD7q/PLZIMp0gFxL7LvbCd37mA80X9TyN8HqBHYFJZxhyRjITwzURLEgNhRnjfZyfwuWJYh8oLLGijbFp74lr3+G3+VVkR7lw69PglBJL5D7uHVD9PbPHLseYjD1Dkdeo4Jw/fjtTLJ0aS/fCV4UJ5bHBCQLVT91OvvoD9xT8FECKaWR/qxk91EJB7ELv5E7nIplj7b6/ZyxE/wN8lO85sQTF5LKPz0jrU0HS:2:3c; domain=.live.com; path=/; secure; HttpOnly; SameSite=None
 ```
+Returns content [main-part1.js](main-part1.js).
 
 ### Request 2: SRF
 `GET` [https://login.live.com/login.srf](https://login.live.com/login.srf)
