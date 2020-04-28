@@ -1,9 +1,6 @@
 
 # Sign Up
 
-## Terminology
-
-```fid```: FlowId
 
 ## Step 1. Username Availability
 
@@ -11,11 +8,11 @@
 
 ### Request
 
-```POST``` [https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
+`POST` [https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CheckAvailableSigninNames?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
 
 ```
-canary: vWZvbb3OK86BIkFlOR7jnW5mfuKVen3mJ6FcCLCFWEXyhGMJFJr52uOF1MLSOwD3Y1q/z5+6xVFGBWVTse5Ii3lexj1fKRUeMFPxTiIdGMxfOaWSJm9QxZ76CRVqV6Lp9Am2N9J6WGv/wVoUFPEoZn8rK9upRNi/QgoizLA42hN7w8aKf1x6YvVY0wBpmdEdFEo3Yw2uxHKL7V0dIB4tkRxVRyCC7qMNt/jGSvPVU6IXGQedeTG5DKrGo4iJRPVi:2:3c
-cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5RaMsDlVCv+UCt1tU1T3UVLpvLRe6mzlPAthdFHXb2arstQ0UzVXQz39Ve0D3jcLx79Ww8gppsI+Kps7majqE3iUVz0BoWaX8QHPMtK2S0FxXo0NYKatXslS5RgzpYCGSZXcIsGl2l2d9CWkp4X7awvlA+XuCUwqXpQ9/r9WcFG6IIw3aH+/PWvGJYazmsMIdkJex03/zdYI3N8O0+KUWgOwH2k4y4RoLzq8DLLi6ewcJCQMGpac8GLpRz/Arpr:2:3c; clrc={%2218379%22%3a[%22d7PFy/1V%22%2c%22+VC+x0R6%22%2c%22fwRyxlqk%22%2c%22P2yuZgWD%22]}
+Canary: vWZvbb3OK86BIkFlOR7jnW5mfuKVen3mJ6FcCLCFWEXyhGMJFJr52uOF1MLSOwD3Y1q/z5+6xVFGBWVTse5Ii3lexj1fKRUeMFPxTiIdGMxfOaWSJm9QxZ76CRVqV6Lp9Am2N9J6WGv/wVoUFPEoZn8rK9upRNi/QgoizLA42hN7w8aKf1x6YvVY0wBpmdEdFEo3Yw2uxHKL7V0dIB4tkRxVRyCC7qMNt/jGSvPVU6IXGQedeTG5DKrGo4iJRPVi:2:3c
+Cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5RaMsDlVCv+UCt1tU1T3UVLpvLRe6mzlPAthdFHXb2arstQ0UzVXQz39Ve0D3jcLx79Ww8gppsI+Kps7majqE3iUVz0BoWaX8QHPMtK2S0FxXo0NYKatXslS5RgzpYCGSZXcIsGl2l2d9CWkp4X7awvlA+XuCUwqXpQ9/r9WcFG6IIw3aH+/PWvGJYazmsMIdkJex03/zdYI3N8O0+KUWgOwH2k4y4RoLzq8DLLi6ewcJCQMGpac8GLpRz/Arpr:2:3c; clrc={%2218379%22%3a[%22d7PFy/1V%22%2c%22+VC+x0R6%22%2c%22fwRyxlqk%22%2c%22P2yuZgWD%22]}
 ```
 ```
 {
@@ -30,7 +27,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 
 ### Response
 
-```200``` Successful: Username available
+`200` Successful: Username available
 ```
 {
   "apiCanary": "TdMFHHdnvxZ5H5+Tf2PQFkTARv9SXapV2fxvzCAHUiUS4peb2QQOgGgUUOY/+KIBv+/pjPOUWdac5DxmSJQjlvb2C1Z4ziFniHN9fFL2YGBBqH1j/PoQmDSVYmwbqHd5Z1RoYIJVlIzeEAWsqwF0NU+6/+wsRB0Tk/sgmnHkQ2WGeauQICmJLgy5ySAYN3gDLc6czLalrj7y/MeGZAYsZo3fVdO8MXzDDQ8wr5lNYTh6dto5bQ04S4BYs0TsC2NU:2:3c",
@@ -41,7 +38,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 }
 ```
 
-```200``` Fail: Username existing
+`200` Fail: Username existing
 ```
 {
   "apiCanary": "TJdA5VHuWJbowGlE/wGUqWFAU6J5pajQCpFJQuCLEtpw+2HCeVjWERBVnOl+XFdEL+zV897wIzy1FFhFobdcKkv2BrvplJ7Btw6biyju9it7OHNtDfRy821PoMarWnrlQK0zyg1bjLNR9U9wFBfE95DXII5B1Fsw9uRyLJbEvyvxjcIzrukFEAL7if0zW2kiJ+oXG+IAOEXwR96NekeA5ZALRuqAo4P8dIuRL9tyqrioMG5eu3JDJ4NhivWQ700Y:2:3c",
@@ -58,7 +55,7 @@ cookie: amsc=bfTyYLP5D3y2zz6CknjKCqbFDdb6w6M/Yy7HtPQiT+5SGQ5MCePML0BEHdxkz1euR5R
 ```
 
 ### Note
-1. ```Canary``` & ```Cookies``` in header are really important. ```uaid``` in json and query in url are not important.
+1. `Canary` & `Cookies` in header are really important. `uaid` in json and query in url are not important.
 
 
 
@@ -88,7 +85,7 @@ No web request is made.
 
 ### Request
 
-```POST``` [https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
+`POST` [https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
 
 ```
 {
@@ -130,7 +127,7 @@ No web request is made.
 
 ![Jhx8Rx.png](https://s1.ax1x.com/2020/04/28/Jhx8Rx.png)
 
-```200``` Fail: Simple Password
+`200` Fail: Simple Password
 ```
 {
   "error": {
@@ -143,7 +140,7 @@ No web request is made.
 }
 ```
 
-```200``` Fail: Captcha
+`200` Fail: Captcha
 ```
 {
   "error": {
@@ -176,19 +173,24 @@ No web request is made.
 
 ### Request 1: Fetch captcha url
 
-```GET``` [https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603](https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603)
+
+`GET` [https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603](https://scu.client.hip.live.com/GetHIP/GetHIPAMFE/HIPAMFE?dc=SCU&mkt=en-US&id=15041&fid=c6ffdcb91e764c5c997e1b3a2b94216f&type=visual&c=3&rnd=0.38727699140529603)
+
+- `fid`: FlowId
+- `id`: ScenarioId
+- `type`: Hip challenge type, could be `visual` or `audio`.
 
 ### Response 1
-```200``` The return content is [HIPAMFE.js](HIPAMFE.js). Find hipChallengeUrl in the file.
+`200` The return content is [HIPAMFE.js](HIPAMFE.js). Find `hipChallengeUrl` in the file. 
 
 
 
 ### Request 2: Fetch captcha image
 
-```GET``` [https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE](https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE)
+`GET` [https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE](https://scu.client.hip.live.com/GetHIPData?hid=SCU.b2750a93a7054e1ba9d79d00df56a6bf&fid=c6ffdcb91e764c5c997e1b3a2b94216f&id=15041&type=visual&cs=HIPAMFE)
 
 ### Response 2
-```200``` The catpcha image   
+`200` The catpcha image   
 ![Jhv02V.png](https://s1.ax1x.com/2020/04/28/Jhv02V.png)
 
 
@@ -201,7 +203,7 @@ No web request is made.
 ## Step 7. Create Account
 
 ### Request
-```POST``` [https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
+`POST` [https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228](https://signup.live.com/API/CreateAccount?lic=1&uaid=9b68be6acc1341f39c881b327b2ba228)
 
 ``` 
 {
