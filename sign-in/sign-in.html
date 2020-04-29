@@ -1,0 +1,1175 @@
+<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html><!-- ServerInfo: BL02PF04F13434A 2020.04.08.22.02.22 Live1 Unknown LocVer:0 -->
+<!-- PreprocessInfo: azbldrun:AzBuildCU-Hsb04, 2020-04-08T21:26:18.3602388-07:00 - Version: 16,0,28575,0 -->
+<!-- RequestLCID: 1033, Market:EN-US, PrefCountry: US, LangLCID: 1033, LangISO: EN -->
+<html dir="ltr" lang="EN-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <base href="https://login.live.com/pp1600/" />
+    <script type="text/javascript">
+        'use strict';
+        var PROOF = {};
+        PROOF.Type = {
+            SQSA: 6,
+            CSS: 5,
+            DeviceId: 4,
+            Email: 1,
+            AltEmail: 2,
+            SMS: 3,
+            HIP: 8,
+            Birthday: 9,
+            TOTPAuthenticator: 10,
+            RecoveryCode: 11,
+            StrongTicket: 13,
+            TOTPAuthenticatorV2: 14,
+            UniversalSecondFactor: 15,
+            Voice: -3
+        };
+    </script>
+    <noscript>
+        <meta http-equiv="Refresh"
+            content="0; URL=https://login.live.com/jsDisabled.srf?mkt=EN-US&lc=1033&uaid=3b95d3bb5c954ab887530e0fd13408a0" />
+        Microsoft account requires JavaScript to sign in. This web browser either does not support JavaScript, or
+        scripts are being blocked.<br /><br />To find out whether your browser supports JavaScript, or to allow scripts,
+        see the browser's online help.</noscript>
+    <title>Sign in to your Microsoft account</title>
+    <meta name="robots" content="none" />
+    <meta name="PageID" content="i5030" />
+    <meta name="SiteID" content="38936" />
+    <meta name="ReqLC" content="1033" />
+    <meta name="LocLC" content="1033" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
+    <script type="text/javascript">
+        'use strict';
+        !function (s, r) {
+            var i;
+            for (i in r) {
+                s[i] = r[i];
+            }
+        }(this, function (modules) {
+            /**
+             * @param {string} moduleId
+             * @return {?}
+             */
+            function __webpack_require__(moduleId) {
+                if (installedModules[moduleId]) {
+                    return installedModules[moduleId].exports;
+                }
+                var module = installedModules[moduleId] = {
+                    exports: {},
+                    id: moduleId,
+                    loaded: false
+                };
+                return modules[moduleId].call(module.exports, module, module.exports, __webpack_require__), module.loaded = true, module.exports;
+            }
+            var installedModules = {};
+            return __webpack_require__.m = modules, __webpack_require__.c = installedModules, __webpack_require__.p = "", __webpack_require__(0);
+        }([function (canCreateDiscussions, isSlidingUp) {
+            !function () {
+                /**
+                 * @return {?}
+                 */
+                function map() {
+                    return self.$Config || self.ServerData || {};
+                }
+                /**
+                 * @param {string} msg
+                 * @param {!Object} obj
+                 * @return {undefined}
+                 */
+                function done(msg, obj) {
+                    var options = self.$Debug;
+                    if (options && options.appendLog) {
+                        if (obj) {
+                            /** @type {string} */
+                            msg = msg + (" '" + (obj.src || obj.href || "") + "'");
+                            /** @type {string} */
+                            msg = msg + (", id:" + (obj.id || ""));
+                            /** @type {string} */
+                            msg = msg + (", async:" + (obj.async || ""));
+                            /** @type {string} */
+                            msg = msg + (", defer:" + (obj.defer || ""));
+                        }
+                        options.appendLog(msg);
+                    }
+                }
+                /**
+                 * @return {?}
+                 */
+                function check() {
+                    var classes = self.$B;
+                    if (void 0 === i) {
+                        if (classes) {
+                            i = classes.IE;
+                        } else {
+                            /** @type {string} */
+                            var ua = self.navigator.userAgent;
+                            /** @type {boolean} */
+                            i = ua.indexOf("MSIE ") !== -1 || ua.indexOf("Trident/") !== -1;
+                        }
+                    }
+                    return i;
+                }
+                /**
+                 * @param {string} value
+                 * @return {?}
+                 */
+                function get(value) {
+                    var currentIndex = value.indexOf("?");
+                    var index = currentIndex > -1 ? currentIndex : value.length;
+                    return index > len && value.substr(index - len, len).toLowerCase() === b;
+                }
+                /**
+                 * @return {?}
+                 */
+                function jQuery() {
+                    var r = map();
+                    var item = r.loader || {};
+                    return item.slReportFailure || r.slReportFailure || false;
+                }
+                /**
+                 * @return {?}
+                 */
+                function callback() {
+                    var tree = map();
+                    var t = tree.loader || {};
+                    return t.redirectToErrorPageOnLoadFailure || false;
+                }
+                /**
+                 * @return {?}
+                 */
+                function getMessageContainers_QW() {
+                    var tree = map();
+                    var t = tree.loader || {};
+                    return t.logByThrowing || false;
+                }
+                /**
+                 * @param {!Object} el
+                 * @return {?}
+                 */
+                function visit(el) {
+                    /** @type {boolean} */
+                    var live = true;
+                    var t = el.src || el.href || "";
+                    if (t) {
+                        if (get(t)) {
+                            try {
+                                if (el.sheet && el.sheet.cssRules && !el.sheet.cssRules.length) {
+                                    /** @type {boolean} */
+                                    live = false;
+                                }
+                            } catch (o) {
+                            }
+                        }
+                    } else {
+                        /** @type {boolean} */
+                        live = false;
+                    }
+                    return live;
+                }
+                /**
+                 * @return {undefined}
+                 */
+                function test() {
+                    /**
+                     * @param {?} src
+                     * @return {undefined}
+                     */
+                    function dpAddStylesheet(src) {
+                        var script_ele = doc.getElementsByTagName("head")[0];
+                        script_ele.appendChild(src);
+                    }
+                    /**
+                     * @param {string} options
+                     * @param {string} n
+                     * @param {boolean} id
+                     * @param {string} o
+                     * @return {?}
+                     */
+                    function load(options, n, id, o) {
+                        /** @type {null} */
+                        var t = null;
+                        return t = get(options) ? init(options) : "script" === o.toLowerCase() ? injectScript(options) : injectGoogleMapsScript(options, o), n && (t.id = n), "function" == typeof t.setAttribute && (t.setAttribute("crossorigin", "anonymous"), id && "string" == typeof id && t.setAttribute("integrity", id)), t;
+                    }
+                    /**
+                     * @param {string} style
+                     * @return {?}
+                     */
+                    function init(style) {
+                        var ss = doc.createElement("link");
+                        return ss.rel = "stylesheet", ss.type = "text/css", ss.href = style, ss;
+                    }
+                    /**
+                     * @param {string} url
+                     * @return {?}
+                     */
+                    function injectScript(url) {
+                        var script = doc.createElement("script");
+                        return script.type = "text/javascript", script.src = url, script.defer = false, script.async = false, script;
+                    }
+                    /**
+                     * @param {string} source
+                     * @param {string} options
+                     * @return {?}
+                     */
+                    function injectGoogleMapsScript(source, options) {
+                        var result = doc.createElement(options);
+                        return result.src = source, result;
+                    }
+                    /**
+                     * @param {string} a
+                     * @return {?}
+                     */
+                    function extend(a) {
+                        if (!(argv && argv.length > 1)) {
+                            return a;
+                        }
+                        /** @type {number} */
+                        var i = 0;
+                        for (; i < argv.length; i++) {
+                            if (0 === a.indexOf(argv[i])) {
+                                return argv[i + 1 < argv.length ? i + 1 : 0] + a.substring(argv[i].length);
+                            }
+                        }
+                        return a;
+                    }
+                    /**
+                     * @param {number} i
+                     * @param {!Object} text
+                     * @param {!Function} value
+                     * @param {!Object} name
+                     * @return {?}
+                     */
+                    function check(i, text, value, name) {
+                        return done("[$Loader]: " + (_this.failMessage || "Failed"), name), results[i].retry < p ? (results[i].retry++, callback(i, text, value), void test._ReportFailure(results[i].retry, results[i].srcPath)) : void (value && value());
+                    }
+                    /**
+                     * @param {number} i
+                     * @param {!Object} data
+                     * @param {!Function} index
+                     * @param {!Object} name
+                     * @return {undefined}
+                     */
+                    function func(i, data, index, name) {
+                        if (visit(name)) {
+                            done("[$Loader]: " + (_this.successMessage || "Loaded"), name);
+                            callback(i + 1, data, index);
+                            var op = results[i].onSuccess;
+                            if ("function" == typeof op) {
+                                op(results[i].srcPath);
+                            }
+                        } else {
+                            check(i, data, index, name);
+                        }
+                    }
+                    /**
+                     * @param {number} i
+                     * @param {!Object} data
+                     * @param {!Function} index
+                     * @return {?}
+                     */
+                    function callback(i, data, index) {
+                        if (i < results.length) {
+                            var options = results[i];
+                            if (!options || !options.srcPath) {
+                                return void callback(i + 1, data, index);
+                            }
+                            if (options.retry > 0) {
+                                options.srcPath = extend(options.srcPath);
+                                if (!options.origId) {
+                                    options.origId = options.id;
+                                }
+                                /** @type {string} */
+                                options.id = options.origId + "_Retry_" + options.retry;
+                            }
+                            var script = load(options.srcPath, options.id, options.integrity, options.tagName);
+                            /**
+                             * @return {undefined}
+                             */
+                            script.onload = function () {
+                                func(i, data, index, script);
+                            };
+                            /**
+                             * @return {undefined}
+                             */
+                            script.onerror = function () {
+                                check(i, data, index, script);
+                            };
+                            /**
+                             * @return {undefined}
+                             */
+                            script.onreadystatechange = function () {
+                                if ("loaded" === script.readyState) {
+                                    setTimeout(function () {
+                                        func(i, data, index, script);
+                                    }, 500);
+                                } else {
+                                    if ("complete" === script.readyState) {
+                                        func(i, data, index, script);
+                                    }
+                                }
+                            };
+                            dpAddStylesheet(script);
+                            done("[$Loader]: Loading '" + (options.srcPath || "") + "', id:" + (options.id || ""));
+                        } else {
+                            if (data) {
+                                data();
+                            }
+                        }
+                    }
+                    var tree = map();
+                    var p = tree.slMaxRetry || 2;
+                    var y = tree.loader || {};
+                    var argv = y.cdnRoots || [];
+                    var _this = this;
+                    /** @type {!Array} */
+                    var results = [];
+                    /** @type {boolean} */
+                    _this.retryOnError = true;
+                    /** @type {string} */
+                    _this.successMessage = "Loaded";
+                    /** @type {string} */
+                    _this.failMessage = "Error";
+                    /**
+                     * @param {string} data
+                     * @param {string} i
+                     * @param {?} str
+                     * @param {number} name
+                     * @param {string} callback
+                     * @param {!Object} path
+                     * @return {undefined}
+                     */
+                    _this.Add = function (data, i, str, name, callback, path) {
+                        if (data) {
+                            results.push({
+                                srcPath: data,
+                                id: i,
+                                retry: name || 0,
+                                integrity: str,
+                                tagName: callback || "script",
+                                onSuccess: path
+                            });
+                        }
+                    };
+                    /**
+                     * @param {!Element} options
+                     * @param {!Object} value
+                     * @return {undefined}
+                     */
+                    _this.AddForReload = function (options, value) {
+                        var data = options.src || options.href || "";
+                        _this.Add(data, "AddForReload", options.integrity, 1, options.tagName, value);
+                    };
+                    /**
+                     * @param {?} aElem
+                     * @param {string} x
+                     * @param {string} n
+                     * @return {undefined}
+                     */
+                    _this.AddIf = function (aElem, x, n) {
+                        if (aElem) {
+                            _this.Add(x, n);
+                        }
+                    };
+                    /**
+                     * @param {!Object} e
+                     * @param {!Function} parent
+                     * @return {undefined}
+                     */
+                    _this.Load = function (e, parent) {
+                        callback(0, e, parent);
+                    };
+                }
+                var i;
+                /** @type {!Window} */
+                var self = window;
+                var doc = self.document;
+                /** @type {string} */
+                var b = ".css";
+                /** @type {number} */
+                var len = b.length;
+                /**
+                 * @param {undefined} err
+                 * @param {?} i
+                 * @param {!Object} doc
+                 * @return {undefined}
+                 */
+                test.On = function (err, i, doc) {
+                    if (!err) {
+                        throw "The target element must be provided and cannot be null.";
+                    }
+                    if (i) {
+                        test.OnError(err, doc);
+                    } else {
+                        test.OnSuccess(err, doc);
+                    }
+                };
+                /**
+                 * @param {!Element} data
+                 * @param {!Object} response
+                 * @return {undefined}
+                 */
+                test.OnSuccess = function (data, response) {
+                    var getdate = data.src || data.href || "";
+                    var answersContainer = jQuery();
+                    var value = callback();
+                    if (!data) {
+                        throw "The target element must be provided and cannot be null.";
+                    }
+                    if (visit(data)) {
+                        done("[$Loader]: Loaded", data);
+                        var self = new test;
+                        /** @type {string} */
+                        self.failMessage = "Reload Failed";
+                        /** @type {string} */
+                        self.successMessage = "Reload Success";
+                        self.Load(null, function () {
+                            if (answersContainer) {
+                                throw "Unexpected state. ResourceLoader.Load() failed despite initial load success. ['" + getdate + "']";
+                            }
+                            if (value) {
+                                /** @type {string} */
+                                document.location.href = "/error.aspx?err=504";
+                            }
+                        });
+                    } else {
+                        test.OnError(data, response);
+                    }
+                };
+                /**
+                 * @param {!Element} data
+                 * @param {!Object} response
+                 * @return {undefined}
+                 */
+                test.OnError = function (data, response) {
+                    var doc = data.src || data.href || "";
+                    var answersContainer = jQuery();
+                    var value = callback();
+                    if (!data) {
+                        throw "The target element must be provided and cannot be null.";
+                    }
+                    done("[$Loader]: Failed", data);
+                    var self = new test;
+                    /** @type {string} */
+                    self.failMessage = "Reload Failed";
+                    /** @type {string} */
+                    self.successMessage = "Reload Success";
+                    self.AddForReload(data, response);
+                    self.Load(null, function () {
+                        if (answersContainer) {
+                            throw "Failed to load external resource ['" + doc + "']";
+                        }
+                        if (value) {
+                            /** @type {string} */
+                            document.location.href = "/error.aspx?err=504";
+                        }
+                    });
+                    test._ReportFailure(0, doc);
+                };
+                /**
+                 * @param {number} context
+                 * @param {string} xmldoc
+                 * @return {undefined}
+                 */
+                test._ReportFailure = function (context, xmldoc) {
+                    if (getMessageContainers_QW() && !check()) {
+                        throw "[Retry " + context + "] Failed to load external resource ['" + xmldoc + "'], reloading from fallback CDN endpoint";
+                    }
+                };
+                /** @type {function(): undefined} */
+                self.$Loader = test;
+            }();
+        }]));
+    </script>
+    <script type="text/javascript">
+        'use strict';
+        !function (r, indexes) {
+            var i;
+            for (i in indexes) {
+                r[i] = indexes[i];
+            }
+        }(this, function (modules) {
+            /**
+             * @param {number} moduleId
+             * @return {?}
+             */
+            function __webpack_require__(moduleId) {
+                if (installedModules[moduleId]) {
+                    return installedModules[moduleId].exports;
+                }
+                var module = installedModules[moduleId] = {
+                    exports: {},
+                    id: moduleId,
+                    loaded: false
+                };
+                return modules[moduleId].call(module.exports, module, module.exports, __webpack_require__), module.loaded = true, module.exports;
+            }
+            var installedModules = {};
+            return __webpack_require__.m = modules, __webpack_require__.c = installedModules, __webpack_require__.p = "", __webpack_require__(0);
+        }([function (canCreateDiscussions, isSlidingUp) {
+            !function () {
+                /**
+                 * @param {number} path
+                 * @param {!Function} handler
+                 * @return {undefined}
+                 */
+                function resolve(path, handler) {
+                    /**
+                     * @param {number} i
+                     * @return {?}
+                     */
+                    function get(i) {
+                        var name = path[i];
+                        return i < length - 1 ? void (item.r[name] ? get(i + 1) : item.when(name, function () {
+                            get(i + 1);
+                        })) : void handler(name);
+                    }
+                    var length = path.length;
+                    get(0);
+                }
+                /**
+                 * @param {number} i
+                 * @param {number} data
+                 * @param {!Object} f
+                 * @return {?}
+                 */
+                function callback(i, data, f) {
+                    /**
+                     * @return {?}
+                     */
+                    function callback() {
+                        /** @type {boolean} */
+                        var req = !!opts.method;
+                        var source = req ? opts.method : f[0];
+                        var keys = opts.extraArgs || [];
+                        var node = $scope.$WebWatson;
+                        try {
+                            var x = i(f, !req);
+                            if (keys && keys.length > 0) {
+                                var l = keys.length;
+                                /** @type {number} */
+                                var i = 0;
+                                for (; i < l; i++) {
+                                    x.push(keys[i]);
+                                }
+                            }
+                            source.apply(data, x);
+                        } catch (childIdentifier) {
+                            return void (node && node.submitFromException && node.submitFromException(childIdentifier));
+                        }
+                    }
+                    var opts = item.r && item.r[i];
+                    return data = data ? data : this, opts && (opts.skipTimeout ? callback() : $scope.setTimeout(callback, 0)), opts;
+                }
+                /**
+                 * @param {!Object} n
+                 * @param {boolean} r
+                 * @return {?}
+                 */
+                function i(n, r) {
+                    return Array.prototype.slice.call(n, r ? 1 : 0);
+                }
+                /** @type {!Window} */
+                var $scope = window;
+                if (!$scope.$Do) {
+                    $scope.$Do = {
+                        q: [],
+                        r: [],
+                        removeItems: [],
+                        lock: 0,
+                        o: []
+                    };
+                }
+                var item = $scope.$Do;
+                /**
+                 * @param {number} c
+                 * @param {string} data
+                 * @return {undefined}
+                 */
+                item.when = function (c, data) {
+                    /**
+                     * @param {number} k
+                     * @return {undefined}
+                     */
+                    function fn(k) {
+                        if (!callback(k, content, fields)) {
+                            item.q.push({
+                                id: k,
+                                c: content,
+                                a: fields
+                            });
+                        }
+                    }
+                    /** @type {number} */
+                    var content = 0;
+                    /** @type {!Array} */
+                    var fields = [];
+                    /** @type {number} */
+                    var firstDisplayed = 1;
+                    /** @type {boolean} */
+                    var cb = "function" == typeof data;
+                    if (!cb) {
+                        /** @type {string} */
+                        content = data;
+                        /** @type {number} */
+                        firstDisplayed = 2;
+                    }
+                    /** @type {number} */
+                    var i = firstDisplayed;
+                    for (; i < arguments.length; i++) {
+                        fields.push(arguments[i]);
+                    }
+                    if (c instanceof Array) {
+                        resolve(c, fn);
+                    } else {
+                        fn(c);
+                    }
+                };
+                /**
+                 * @param {undefined} index
+                 * @param {string} n
+                 * @param {?} a
+                 * @return {undefined}
+                 */
+                item.register = function (index, n, a) {
+                    if (!item.r[index]) {
+                        item.o.push(index);
+                        var ret = {};
+                        if (n && (ret.method = n), a && (ret.skipTimeout = a), arguments && arguments.length > 3) {
+                            /** @type {!Array} */
+                            ret.extraArgs = [];
+                            /** @type {number} */
+                            var i = 3;
+                            for (; i < arguments.length; i++) {
+                                ret.extraArgs.push(arguments[i]);
+                            }
+                        }
+                        item.r[index] = ret;
+                        item.lock++;
+                        try {
+                            /** @type {number} */
+                            var i = 0;
+                            for (; i < item.q.length; i++) {
+                                var row = item.q[i];
+                                if (row.id == index && callback(index, row.c, row.a)) {
+                                    item.removeItems.push(row);
+                                }
+                            }
+                        } catch (f) {
+                            throw f;
+                        } finally {
+                            if (item.lock--, 0 === item.lock) {
+                                /** @type {number} */
+                                var j = 0;
+                                for (; j < item.removeItems.length; j++) {
+                                    var v = item.removeItems[j];
+                                    /** @type {number} */
+                                    var i = 0;
+                                    for (; i < item.q.length; i++) {
+                                        if (item.q[i] === v) {
+                                            item.q.splice(i, 1);
+                                            break;
+                                        }
+                                    }
+                                }
+                                /** @type {!Array} */
+                                item.removeItems = [];
+                            }
+                        }
+                    }
+                };
+                /**
+                 * @param {?} name
+                 * @return {undefined}
+                 */
+                item.unregister = function (name) {
+                    if (item.r[name]) {
+                        delete item.r[name];
+                    }
+                };
+            }();
+        }]));
+    </script>
+    <script type="text/javascript">
+        'use strict';
+        !function (settings, defaultSetting) {
+            var key;
+            for (key in defaultSetting) {
+                settings[key] = defaultSetting[key];
+            }
+        }(this, function (modules) {
+            /**
+             * @param {number} moduleId
+             * @return {?}
+             */
+            function __webpack_require__(moduleId) {
+                if (installedModules[moduleId]) {
+                    return installedModules[moduleId].exports;
+                }
+                var module = installedModules[moduleId] = {
+                    exports: {},
+                    id: moduleId,
+                    loaded: false
+                };
+                return modules[moduleId].call(module.exports, module, module.exports, __webpack_require__), module.loaded = true, module.exports;
+            }
+            var installedModules = {};
+            return __webpack_require__.m = modules, __webpack_require__.c = installedModules, __webpack_require__.p = "", __webpack_require__(0);
+        }([function (n, canCreateDiscussions) {
+            !function () {
+                /**
+                 * @return {?}
+                 */
+                function _classCallCheck() {
+                    return c.$Config || c.ServerData || {};
+                }
+                /**
+                 * @return {undefined}
+                 */
+                function Position() {
+                    var self = (_classCallCheck(), new nodeTlx);
+                    var p = this;
+                    /** @type {!Array} */
+                    var path = [];
+                    /** @type {!Array} */
+                    var f = [];
+                    /**
+                     * @param {?} c
+                     * @param {?} name
+                     * @param {?} a
+                     * @param {?} f
+                     * @return {undefined}
+                     */
+                    p.Add = function (c, name, a, f) {
+                        self.Add(c, name, a, f);
+                    };
+                    /**
+                     * @param {string} keyPath
+                     * @return {undefined}
+                     */
+                    p.Provides = function (keyPath) {
+                        if (keyPath) {
+                            if (keyPath instanceof Array) {
+                                /** @type {number} */
+                                var i = 0;
+                                for (; i < keyPath.length; i++) {
+                                    path.push(keyPath[i]);
+                                }
+                            } else {
+                                path.push(keyPath);
+                            }
+                        }
+                    };
+                    /**
+                     * @param {string} value
+                     * @return {undefined}
+                     */
+                    p.Requires = function (value) {
+                        if (value) {
+                            if (value instanceof Array) {
+                                /** @type {number} */
+                                var i = 0;
+                                for (; i < value.length; i++) {
+                                    f.push(value[i]);
+                                }
+                            } else {
+                                f.push(value);
+                            }
+                        }
+                    };
+                    /**
+                     * @param {!Function} callback
+                     * @param {?} file
+                     * @return {undefined}
+                     */
+                    p.Load = function (callback, file) {
+                        /**
+                         * @return {undefined}
+                         */
+                        var fn = function () {
+                            if (callback) {
+                                callback();
+                            }
+                            /** @type {number} */
+                            var i = 0;
+                            for (; i < path.length; i++) {
+                                utils.register(path[i], 0, true);
+                            }
+                        };
+                        /**
+                         * @return {undefined}
+                         */
+                        var callback = function () {
+                            self.Load(fn, file);
+                        };
+                        if (f.length > 0) {
+                            utils.when(f, callback);
+                        } else {
+                            callback();
+                        }
+                    };
+                }
+                /** @type {!Window} */
+                var c = window;
+                var utils = (c.document, c.$Do);
+                var nodeTlx = c.$Loader;
+                /** @type {string} */
+                var expRecords = ".css";
+                expRecords.length;
+                /**
+                 * @param {?} text
+                 * @param {?} obj
+                 * @return {undefined}
+                 */
+                Position.WhenLoaded = function (text, obj) {
+                    utils.when(text, obj);
+                };
+                /** @type {function(): undefined} */
+                c.$DepLoader = Position;
+            }();
+        }]));
+    </script>
+    <link rel="shortcut icon" href="https://logincdn.msauth.net/16.000.28575.00/images/favicon.ico" />
+    <link rel="stylesheet" title="Converged_v2" type="text/css" onload="$Loader.OnSuccess(this)"
+        onerror="$Loader.OnError(this)"
+        href="https://logincdn.msauth.net/16.000/Converged_v21033_U7M7Fc-d_yiO2hIJng7nRg2.css" />
+    <style type="text/css"></style>
+    <style type="text/css">
+        body {
+            display: none;
+        }
+    </style>
+    <script
+        type="text/javascript">if (top != self) { try { top.location.replace(self.location.href); } catch (e) { } } else { document.write(unescape('%3C%73') + 'tyle type="text/css">body{display:block !important;}</style>'); }</script>
+    <noscript>
+        <style type="text/css">
+            body {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script type="text/javascript">
+        'use strict';
+        !function (s, r) {
+            var i;
+            for (i in r) {
+                s[i] = r[i];
+            }
+        }(this, function (modules) {
+            /**
+             * @param {number} moduleId
+             * @return {?}
+             */
+            function __webpack_require__(moduleId) {
+                if (installedModules[moduleId]) {
+                    return installedModules[moduleId].exports;
+                }
+                var module = installedModules[moduleId] = {
+                    exports: {},
+                    id: moduleId,
+                    loaded: false
+                };
+                return modules[moduleId].call(module.exports, module, module.exports, __webpack_require__), module.loaded = true, module.exports;
+            }
+            var installedModules = {};
+            return __webpack_require__.m = modules, __webpack_require__.c = installedModules, __webpack_require__.p = "", __webpack_require__(0);
+        }([function (isSlidingUp, canCreateDiscussions) {
+            /** @type {!Window} */
+            var root = window;
+            /** @type {(Navigator|null)} */
+            var nav = root.navigator;
+            /** @type {number} */
+            root.g_iSRSFailed = 0;
+            /** @type {string} */
+            root.g_sSRSSuccess = "";
+            /**
+             * @param {string} flag
+             * @param {string} mask
+             * @param {number} value
+             * @param {string} type
+             * @param {string} default_alpha
+             * @return {undefined}
+             */
+            canCreateDiscussions.SRSRetry = function (flag, mask, value, type, default_alpha) {
+                /** @type {number} */
+                var to = 1;
+                /** @type {string} */
+                var key = unescape("%3Cscript type='text/javascript'");
+                if (default_alpha) {
+                    /** @type {string} */
+                    key = key + (" crossorigin='anonymous' integrity='" + default_alpha + "'");
+                }
+                /** @type {string} */
+                key = key + " src='";
+                /** @type {string} */
+                var index = unescape("'%3E%3C/script%3E");
+                /** @type {string} */
+                var val = mask;
+                if (nav && nav.userAgent && type && type !== mask) {
+                    /** @type {string} */
+                    var type = nav.userAgent.toLowerCase();
+                    /** @type {boolean} */
+                    var p = type.indexOf("edge") >= 0;
+                    if (!p) {
+                        /** @type {(Array<string>|null)} */
+                        var playMinutes = type.match(/chrome\/([0-9]+)\./);
+                        /** @type {(boolean|null)} */
+                        var g = playMinutes && 2 === playMinutes.length && !isNaN(playMinutes[1]) && parseInt(playMinutes[1]) > 54;
+                        if (g) {
+                            /** @type {string} */
+                            val = type;
+                        }
+                    }
+                }
+                if (root.g_sSRSSuccess.indexOf(flag) === -1) {
+                    if ("undefined" == typeof root[flag]) {
+                        /** @type {number} */
+                        root.g_iSRSFailed = 1;
+                        if (value <= to) {
+                            document.write(key + val + index);
+                        }
+                    } else {
+                        root.g_sSRSSuccess += flag + "|" + value + ",";
+                    }
+                }
+            };
+        }]));
+        /** @type {!Date} */
+        var g_dtFirstByte = new Date;
+        /** @type {null} */
+        var g_objPageMode = null;
+    </script>
+    <link rel="image_src" href="https://logincdn.msauth.net/16.000.28575.00/images/Windows_Live_v_thumb.jpg" />
+    <script type="text/javascript">
+        'use strict';
+        var ServerData = {
+            Bh: 0,
+            Bj: 2,
+            CI: false,
+            CL: false,
+            aC: true,
+            CQ: 0,
+            Br: "",
+            Bt: "PPFT",
+            Bu: "16.0.28575.0",
+            CU: 1,
+            aJ: false,
+            Bw: "",
+            CV: 0,
+            Bx: "",
+            CY: {},
+            CZ: {
+                "Logo": "",
+                "LogoAltText": "",
+                "LogoText": "",
+                "ShowWLHeader": true
+            },
+            aO: true,
+            aR: true,
+            urlLogin: "https://login.live.com/login.srf?contextid=0A288E8561DA9F55&bk=1588155153&mkt=EN-US&lc=1033&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            b3: false,
+            b4: false,
+            hpgid: 33,
+            Cd: true,
+            b7: true,
+            aZ: true,
+            Cn: false,
+            urlFed: "",
+            ab: true,
+            ac: false,
+            bB: "https://login.live.com/gls.srf?urlID=MSNPrivacyStatement&mkt=EN-US&vv=1600&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            bC: "https://login.live.com/GetCredentialType.srf?opid=14EE6DDA226BE77B&vv=1600&mkt=EN-US&lc=1033&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            ae: true,
+            Cr: 0,
+            bH: "https://login.live.com/GetSessionState.srf?vv=1600&mkt=EN-US&lc=1033&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            sPOST_NewUser: "",
+            ak: false,
+            Cy: {},
+            bL: 0,
+            Cz: {},
+            an: false,
+            bN: true,
+            ao: false,
+            bO: true,
+            bQ: false,
+            urlPost: "https://login.live.com/ppsecure/post.srf?contextid=0A288E8561DA9F55&bk=1588155153&uaid=3b95d3bb5c954ab887530e0fd13408a0&pid=0",
+            bU: false,
+            ay: false,
+            az: true,
+            A: 10000,
+            fWebNgcFS: false,
+            B: false,
+            C: "",
+            D: {},
+            sFedQS: "wa=wsignin1.0&wtrealm=uri:WindowsLiveID&wctx=contextid%3D0A288E8561DA9F55%26bk%3D1588155153",
+            F: "",
+            bb: "https://login.microsoft.com/consumer/fido/get?mkt=EN-US&lc=1033&uiflavor=web",
+            H: "https://signup.live.com/signup?contextid=0A288E8561DA9F55&bk=1588155153&ru=https://login.live.com/login.srf%3fcontextid%3d0A288E8561DA9F55%26mkt%3dEN-US%26lc%3d1033%26bk%3d1588155153%26uaid%3d3b95d3bb5c954ab887530e0fd13408a0&uiflavor=web&lic=1&mkt=EN-US&lc=1033&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            I: false,
+            cB: "",
+            bc: "https://login.live.com/gls.srf?urlID=WinLiveTermsOfUse&mkt=EN-US&vv=1600&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            cC: "",
+            be: "https://login.live.com/Me.htm?v=3&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            bf: "",
+            cE: '#~#partnerdomain#~# does\'t use this service. Please sign in with a Microsoft account or create a new account. <a href="#~#WLPaneHelpInviteBlockedURL_LS#~#" id="idPaneHelpInviteBlockedLink9">Learn More</a>',
+            L: 0,
+            bg: "",
+            P: "",
+            cI: 'Use the primary phone number you\'ve associated with your Microsoft account. <a href="http://explore.live.com/windows-live-sign-in-single-use-code-faq" id="idPaneHelpOTCInfoLink9" target="_blank">Learn more</a>',
+            Q: "https://account.live.com/ResetPassword.aspx?wreply=https://login.live.com/login.srf%3fcontextid%3d0A288E8561DA9F55%26bk%3d1588155153&id=38936&uiflavor=web&uaid=3b95d3bb5c954ab887530e0fd13408a0&mkt=EN-US&lc=1033&bk=1588155153",
+            str: [],
+            bl: 2,
+            bm: true,
+            T: 0,
+            bn: true,
+            U: 60,
+            cO: "",
+            cP: "",
+            W: "",
+            bq: false,
+            cQ: "",
+            br: false,
+            cR: "",
+            Y: "",
+            Z: "",
+            cT: "https://go.microsoft.com/fwlink/?linkid=2013738",
+            bu: false,
+            urlSwitch: "https://login.live.com/logout.srf?contextid=0A288E8561DA9F55&uaid=3b95d3bb5c954ab887530e0fd13408a0&ru=https://account.live.com%3fmkt%3dEN-US%26lc%3d1033%26id%3d38936&bk=1588155153&lm=I",
+            AB: false,
+            AC: 3,
+            urlFedConvertRename: "https://account.live.com/security/LoginStage.aspx?lmif=1000&ru=https://login.live.com/login.srf%3Fvv%3D1600%26mkt%3DEN-US%26lc%3D1033%26uaid%3D3b95d3bb5c954ab887530e0fd13408a0&vv=1600&mkt=EN-US&lc=1033&cbid=0&id=38936&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            cV: "",
+            cW: "https://go.microsoft.com/fwlink/?LinkID=254486",
+            bx: false,
+            by: true,
+            a: "https://logincdn.msauth.net/16.000.28575.00/",
+            b: 0,
+            AI: true,
+            d: false,
+            e: 1,
+            f: true,
+            AL: true,
+            h: "",
+            AN: true,
+            i: -1,
+            AP: 0,
+            j: "3b95d3bb5c954ab887530e0fd13408a0",
+            cd: "PassportRN",
+            B2: "https://account.live.com/query.aspx?uaid=3b95d3bb5c954ab887530e0fd13408a0&mkt=EN-US&lc=1033&id=38936",
+            cf: "",
+            n: 1033,
+            AT: "",
+            o: "https://github.com/login/oauth/authorize?response_type=code&client_id=e37ffdec11c0245cb2e0&scope=read:user++user:email&redirect_uri=https://login.live.com/HandleGithubResponse.srf&allow_signup=false&state=14EE6DDA226BE77B",
+            AU: "",
+            sCBUpTxt1: "",
+            B5: "",
+            ci: 'A single-use code lets you sign in without entering your password. This helps protect your account when you\'re using someone else\'s PC. <a href="http://explore.live.com/windows-live-sign-in-single-use-code-faq" id="idPaneHelpOTCInfoLink9" target="_blank">Learn more</a>',
+            p: "https://login.live.com/cookiesDisabled.srf?uaid=3b95d3bb5c954ab887530e0fd13408a0&mkt=EN-US&lc=1033",
+            sCBUpTxt2: "",
+            AW: "",
+            cj: 'Your session has timed out. To request a single use code, please <a href="javascript:NewOTCRequest()">refresh the page</a>.',
+            r: true,
+            AX: "",
+            cl: "Sign in",
+            t: 1,
+            AZ: "",
+            u: null,
+            cp: "https://sc.imp.live.com/content/dam/imp/surfaces/mail_signin/v3/account/EN-US.html?id=38936&mkt=EN-US",
+            w: "contextid=0A288E8561DA9F55&bk=1588155153",
+            cq: "",
+            correlationId: "3b95d3bb5c954ab887530e0fd13408a0",
+            cr: "",
+            cs: "",
+            oPost: {},
+            Aa: false,
+            cu: "",
+            BA: true,
+            Ab: true,
+            Ad: null,
+            Ae: "AF~Afghanistan~93!!!AL~Albania~355!!!DZ~Algeria~213!!!AD~Andorra~376!!!AO~Angola~244!!!AQ~Antarctica~672!!!AG~Antigua and Barbuda~1!!!AR~Argentina~54!!!AM~Armenia~374!!!AW~Aruba~297!!!AC~Ascension Island~247!!!AU~Australia~61!!!AT~Austria~43!!!AZ~Azerbaijan~994!!!BS~Bahamas~1!!!BH~Bahrain~973!!!BD~Bangladesh~880!!!BB~Barbados~1!!!BY~Belarus~375!!!BE~Belgium~32!!!BZ~Belize~501!!!BJ~Benin~229!!!BM~Bermuda~1!!!BT~Bhutan~975!!!BO~Bolivia~591!!!BQ~Bonaire~599!!!BA~Bosnia and Herzegovina~387!!!BW~Botswana~267!!!BV~Bouvet Island~47!!!BR~Brazil~55!!!IO~British Indian Ocean Territory~44!!!VG~British Virgin Islands~1!!!BN~Brunei~673!!!BG~Bulgaria~359!!!BF~Burkina Faso~226!!!BI~Burundi~257!!!CV~Cabo Verde~238!!!KH~Cambodia~855!!!CM~Cameroon~237!!!CA~Canada~1!!!KY~Cayman Islands~1!!!CF~Central African Republic~236!!!TD~Chad~235!!!CL~Chile~56!!!CN~China~86!!!CX~Christmas Island~61!!!CC~Cocos (Keeling) Islands~61!!!CO~Colombia~57!!!KM~Comoros~269!!!CG~Congo~242!!!CD~Congo (DRC)~243!!!CK~Cook Islands~682!!!CR~Costa Rica~506!!!CI~C\u00f4te d'Ivoire~225!!!HR~Croatia~385!!!CU~Cuba~53!!!CW~Cura\u00e7ao~599!!!CY~Cyprus~357!!!CZ~Czechia~420!!!DK~Denmark~45!!!DJ~Djibouti~253!!!DM~Dominica~1!!!DO~Dominican Republic~1!!!EC~Ecuador~593!!!EG~Egypt~20!!!SV~El Salvador~503!!!GQ~Equatorial Guinea~240!!!ER~Eritrea~291!!!EE~Estonia~372!!!ET~Ethiopia~251!!!FK~Falkland Islands~500!!!FO~Faroe Islands~298!!!FJ~Fiji~679!!!FI~Finland~358!!!FR~France~33!!!GF~French Guiana~594!!!PF~French Polynesia~689!!!GA~Gabon~241!!!GM~Gambia~220!!!GE~Georgia~995!!!DE~Germany~49!!!GH~Ghana~233!!!GI~Gibraltar~350!!!GR~Greece~30!!!GL~Greenland~299!!!GD~Grenada~1!!!GP~Guadeloupe~590!!!GU~Guam~1!!!GT~Guatemala~502!!!GG~Guernsey~44!!!GN~Guinea~224!!!GW~Guinea-Bissau~245!!!GY~Guyana~592!!!HT~Haiti~509!!!HN~Honduras~504!!!HK~Hong Kong SAR~852!!!HU~Hungary~36!!!IS~Iceland~354!!!IN~India~91!!!ID~Indonesia~62!!!IR~Iran~98!!!IQ~Iraq~964!!!IE~Ireland~353!!!IM~Isle of Man~44!!!IL~Israel~972!!!IT~Italy~39!!!JM~Jamaica~1!!!XJ~Jan Mayen~47!!!JP~Japan~81!!!JE~Jersey~44!!!JO~Jordan~962!!!KZ~Kazakhstan~7!!!KE~Kenya~254!!!KI~Kiribati~686!!!KR~Korea~82!!!XK~Kosovo~383!!!KW~Kuwait~965!!!KG~Kyrgyzstan~996!!!LA~Laos~856!!!LV~Latvia~371!!!LB~Lebanon~961!!!LS~Lesotho~266!!!LR~Liberia~231!!!LY~Libya~218!!!LI~Liechtenstein~423!!!LT~Lithuania~370!!!LU~Luxembourg~352!!!MO~Macao SAR~853!!!MK~North Macedonia~389!!!MG~Madagascar~261!!!MW~Malawi~265!!!MY~Malaysia~60!!!MV~Maldives~960!!!ML~Mali~223!!!MT~Malta~356!!!MH~Marshall Islands~692!!!MQ~Martinique~596!!!MR~Mauritania~222!!!MU~Mauritius~230!!!YT~Mayotte~262!!!MX~Mexico~52!!!FM~Micronesia~691!!!MD~Moldova~373!!!MC~Monaco~377!!!MN~Mongolia~976!!!ME~Montenegro~382!!!MS~Montserrat~1!!!MA~Morocco~212!!!MZ~Mozambique~258!!!MM~Myanmar~95!!!NA~Namibia~264!!!NR~Nauru~674!!!NP~Nepal~977!!!NL~Netherlands~31!!!AN~Netherlands Antilles (Former)~599!!!NC~New Caledonia~687!!!NZ~New Zealand~64!!!NI~Nicaragua~505!!!NE~Niger~227!!!NG~Nigeria~234!!!NU~Niue~683!!!MP~Northern Mariana Islands~1!!!NO~Norway~47!!!OM~Oman~968!!!PK~Pakistan~92!!!PW~Palau~680!!!PS~Palestinian Authority~970!!!PA~Panama~507!!!PG~Papua New Guinea~675!!!PY~Paraguay~595!!!PE~Peru~51!!!PH~Philippines~63!!!PL~Poland~48!!!PT~Portugal~351!!!QA~Qatar~974!!!RE~R\u00e9union~262!!!RO~Romania~40!!!RU~Russia~7!!!RW~Rwanda~250!!!XS~Saba~599!!!KN~Saint Kitts and Nevis~1!!!LC~Saint Lucia~1!!!PM~Saint Pierre and Miquelon~508!!!VC~Saint Vincent and the Grenadines~1!!!WS~Samoa~685!!!SM~San Marino~378!!!ST~S\u00e3o Tom\u00e9 and Pr\u00edncipe~239!!!SA~Saudi Arabia~966!!!SN~Senegal~221!!!RS~Serbia~381!!!SC~Seychelles~248!!!SL~Sierra Leone~232!!!SG~Singapore~65!!!XE~Sint Eustatius~599!!!SK~Slovakia~421!!!SI~Slovenia~386!!!SB~Solomon Islands~677!!!SO~Somalia~252!!!ZA~South Africa~27!!!SS~South Sudan~211!!!ES~Spain~34!!!LK~Sri Lanka~94!!!SH~St Helena, Ascension, and Tristan da Cunha~290!!!SD~Sudan~249!!!SR~Suriname~597!!!SJ~Svalbard~47!!!SZ~Swaziland~268!!!SE~Sweden~46!!!CH~Switzerland~41!!!SY~Syria~963!!!TW~Taiwan~886!!!TJ~Tajikistan~992!!!TZ~Tanzania~255!!!TH~Thailand~66!!!TL~Timor-Leste~670!!!TG~Togo~228!!!TK~Tokelau~690!!!TO~Tonga~676!!!TT~Trinidad and Tobago~1!!!TA~Tristan da Cunha~290!!!TN~Tunisia~216!!!TR~Turkey~90!!!TM~Turkmenistan~993!!!TC~Turks and Caicos Islands~1!!!TV~Tuvalu~688!!!UM~U.S. Outlying Islands~1!!!VI~U.S. Virgin Islands~1!!!UG~Uganda~256!!!UA~Ukraine~380!!!AE~United Arab Emirates~971!!!UK~United Kingdom~44!!!US~United States~1!!!UY~Uruguay~598!!!UZ~Uzbekistan~998!!!VU~Vanuatu~678!!!VA~Vatican City~379!!!VE~Venezuela~58!!!VN~Vietnam~84!!!WF~Wallis and Futuna~681!!!YE~Yemen~967!!!ZM~Zambia~260!!!ZW~Zimbabwe~263",
+            Af: "https://account.live.com/username/recover?wreply=https://login.live.com/login.srf%3flc%3d1033%26mkt%3dEN-US%26contextid%3d0A288E8561DA9F55%26bk%3d1588155153%26uaid%3d3b95d3bb5c954ab887530e0fd13408a0&id=38936&mkt=EN-US&lc=1033&uaid=3b95d3bb5c954ab887530e0fd13408a0&uiflavor=web",
+            cy: "",
+            Ag: "",
+            Ai: [],
+            Aj: false,
+            sErrTxt: "",
+            Am: false,
+            BM: "",
+            BO: "",
+            Ap: 0,
+            html: [],
+            iPawnIcon: 1,
+            sFTTag: '<input type="hidden" name="PPFT" id="i0327" value="DT0z6eKdVsZLFmTEtZ16qiQ!CMEKKxiQT0J560cBCxOcVePosQhK7ghYmfDDpYy5jgBo7WApngmH**7huGoveVa4PbMWHZhUSYOhRBqxQaGlfddNht1i7JiarcXI2ipU173lLJGcKv7VD1r6Obyfb*EpdNs7gwvqC0C9Ho5RoMFkqZqTFjJnNJ2SJ1thGjBV5g!f0JmRxgKFQCk3W4yj*z2hwBu*weNVVaCzgN9FmUhAGAAwcP6xrSA47MGzF998Tg$$"/>',
+            C0: "",
+            Ar: 0,
+            As: "login.live.com",
+            loader: {
+                cdnRoots: ["https://logincdn.msauth.net/", "https://lgincdnvzeuno.azureedge.net/", "https://lgincdnmsftuswe2.azureedge.net/"]
+            },
+            C3: "##li16####B##Hotmail##/B####BR##The smart way to do email - fast, easy and reliable##li8####B##Messenger##/B####BR##Stay in touch with the most important people in your life##li10####B##SkyDrive##/B####BR##Free, password-protected online storage",
+            Au: "",
+            C4: "sign up",
+            C5: "",
+            BV: "",
+            C6: "",
+            BW: "",
+            C7: "",
+            BX: "",
+            Az: "",
+            a0: true,
+            fHasBackgroundColor: false,
+            urlStaySignIn: "https://login.live.com/login.srf?contextid=0A288E8561DA9F55&mkt=EN-US&lc=1033&bk=1588155153&uaid=3b95d3bb5c954ab887530e0fd13408a0",
+            a3: false,
+            Bc: true,
+            CB: true,
+            Bd: 0,
+            Bf: 3,
+            Bg: 5
+        };
+    </script>
+    <script type="text/javascript">window.UXResourceDependencies = [];</script>
+    <script type="text/javascript">
+        'use strict';
+        (function () {
+            var coll = new window.$DepLoader;
+            coll.Add("https://logincdn.msauth.net/16.000/js/ConvergedLoginPaginatedStrings.en_T3qwLP7znNWPKqDNiN1yMw2.js", "ConvergedLoginPaginatedStrings", "sha384-GUMy/rBWjHEV0salLXj+fw65r40nSOposWvLIL9UxpLCAmFW78UNr+S3mvjWVkYH");
+            coll.Provides("UX_JS_Strings");
+            /** @type {string} */
+            var resId = "UX_Res_" + window.UXResourceDependencies.length;
+            coll.Provides(resId);
+            window.UXResourceDependencies.push(resId);
+            coll.Load();
+        })();
+    </script>
+    <script type="text/javascript">
+        'use strict';
+        (function () {
+            var reply = new window.$DepLoader;
+            reply.Add("https://logincdn.msauth.net/16.000/js/OldConvergedLogin_PCore_aVM1w-cZUmxBuUwcxHGw9g2.js", "OldConvergedLogin_PCore", "sha384-JE8JfRAlJ1d/2c2/8SR95FRInHnU6BilwJoMZmlWUddmoeaytgAdPiFkG/7+wV8R");
+            reply.Requires("UX_JS_Strings");
+            reply.Provides("UX_JS_Core");
+            /** @type {string} */
+            var res = "UX_Res_" + window.UXResourceDependencies.length;
+            reply.Provides(res);
+            window.UXResourceDependencies.push(res);
+            reply.Load();
+        })();
+    </script>
+    <script type="text/javascript">
+        'use strict';
+        /**
+         * @param {?} callback
+         * @return {undefined}
+         */
+        window.WhenAllLoaded = function (callback) {
+            window.$DepLoader.WhenLoaded(window.UXResourceDependencies, callback);
+        };
+    </script>
+</head>
+
+<body class="cb" data-bind="defineGlobals: ServerData, bodyCssClass"></body>
+
+</html>
