@@ -34,8 +34,6 @@
 - `1256`: emailMustStartWithLetter
 - `1334`: evictionWarningRequired
 
-There is a `Required fields` section for each part. To make a successful request, fields have to be provided properly. Fields not listed within are optional/not occuring errors.
-
 ## Step 0. Initialize
 
 ### Request
