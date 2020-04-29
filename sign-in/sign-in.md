@@ -86,3 +86,6 @@ i13=0&login=shawn.mendersh%40outlook.com&loginfmt=shawn.mendersh%40outlook.com&t
 ```
 
 ### Response
+
+`200` Fail: Incorrect password
+[pwd-incorrect.html](pwd-incorrect.html)
