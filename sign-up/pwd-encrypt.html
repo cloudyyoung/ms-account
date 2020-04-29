@@ -1,0 +1,797 @@
+<html>
+
+<body>
+    <script>
+        var Key = "e=10001;m=abef72b26a0f2555ad7e7f8b3f4972878235c2df6ea147e58f062a176964eb6dda829756960fdec18fbcabb9cf4d57493ef885093f4bd1a846a63bdebdeefd20eebe71d9f5eb6f8ddb8e9ee7c9de12c6f6963f8486a3434ce0289eeaf5fea94ae1474e13ebcd03d0b7ffdb353b9db4abdda91240bb03e5110282743a9bfe993e578b49b0adde478b3caf7d8a0c7b0355ff8ef106018cedcccfde2db51bca63af10bbb30ce1168d5efdb5e84b01b02c2ffe4d5b6b6c67e1ea54be792a887fc41a866591bfe7afab22c80db20d50d6515dcaa6b039ca3c06dbc623817340d429f43e7a079858f4b863990074051e7d7109be2f1f194114b25537d63ec630b4d789";
+        var randomNum = "AF788EF1483B459583C7BAF03A3CACA5BEB1715BDC4D0FDC3054D2C5354CD0A5E2341958DEEDDE50A9A0210E361B65A94C62B669376E2C8C0BF8487BB935BFD9CB6957F11E611495BFDC2BB891B6946A32A6592B79D43A4A3B53D5A893404EEECFD07C6D"; var SKI = "4B8F32B06B3633468A617C4D5781E6B301099447";
+
+        function PackageNewPwdOnly(data) {
+            /** @type {!Array} */
+            var bBag = [];
+            /** @type {number} */
+            var callbackCount = 0;
+            /** @type {number} */
+            bBag[callbackCount++] = 1;
+            /** @type {number} */
+            bBag[callbackCount++] = 1;
+            var first;
+            var i = data.length;
+            bBag[callbackCount++] = i;
+            /** @type {number} */
+            first = 0;
+            for (; i > first; first++) {
+                /** @type {number} */
+                bBag[callbackCount++] = 127 & data.charCodeAt(first);
+            }
+            return bBag[callbackCount++] = 0, bBag[callbackCount++] = 0, bBag;
+        }
+
+        function parseRSAKeyFromString(v) {
+            var t = v.indexOf(";");
+            if (0 > t) {
+                return null;
+            }
+            var m = v.substr(0, t);
+            var cmdargs = v.substr(t + 1);
+            var idx = m.indexOf("=");
+            if (0 > idx) {
+                return null;
+            }
+            var matrix = m.substr(idx + 1);
+            if (idx = cmdargs.indexOf("="), 0 > idx) {
+                return null;
+            }
+            var name = cmdargs.substr(idx + 1);
+            /** @type {!Object} */
+            var result = new Object;
+            return result.n = hexStringToMP(name), result.e = parseInt(matrix, 16), result;
+        }
+
+        function hexStringToMP(input) {
+            var i;
+            var total_pageviews_raw;
+            /** @type {number} */
+            var length = Math.ceil(input.length / 4);
+            var info = new JSMPnumber;
+            /** @type {number} */
+            info.size = length;
+            /** @type {number} */
+            i = 0;
+            for (; length > i; i++) {
+                total_pageviews_raw = input.substr(4 * i, 4);
+                /** @type {number} */
+                info.data[length - 1 - i] = parseInt(total_pageviews_raw, 16);
+            }
+            return info;
+        }
+
+        function JSMPnumber() {
+            /** @type {number} */
+            this.size = 1;
+            /** @type {!Array} */
+            this.data = [];
+            /** @type {number} */
+            this.data[0] = 0;
+        }
+
+        JSMPnumber.prototype = {
+            "size": 1,
+            "data": [0]
+        }
+
+        /** Encryption Helpers **/
+        function mapByteToBase64(n) {
+            return n >= 0 && 26 > n ? String.fromCharCode(65 + n) : n >= 26 && 52 > n ? String.fromCharCode(97 + n - 26) : n >= 52 && 62 > n ? String.fromCharCode(48 + n - 52) : 62 == n ? "+" : "/";
+        }
+        /**
+         * @param {number} data
+         * @param {number} obj
+         * @return {?}
+         */
+        function base64Encode(data, obj) {
+            var upperValue;
+            /** @type {string} */
+            var output = "";
+            /** @type {number} */
+            upperValue = obj;
+            for (; 4 > upperValue; upperValue++) {
+                /** @type {number} */
+                data = data >> 6;
+            }
+            /** @type {number} */
+            upperValue = 0;
+            for (; obj > upperValue; upperValue++) {
+                /** @type {string} */
+                output = mapByteToBase64(63 & data) + output;
+                /** @type {number} */
+                data = data >> 6;
+            }
+            return output;
+        }
+        /**
+         * @param {!Array} data
+         * @return {?}
+         */
+        function byteArrayToBase64(data) {
+            var i;
+            var value;
+            var newLen = data.length;
+            /** @type {string} */
+            var totalStackCode = "";
+            /** @type {number} */
+            i = newLen - 3;
+            for (; i >= 0; i = i - 3) {
+                /** @type {number} */
+                value = data[i] | data[i + 1] << 8 | data[i + 2] << 16;
+                /** @type {string} */
+                totalStackCode = totalStackCode + base64Encode(value, 4);
+            }
+            /** @type {number} */
+            var rgb = newLen % 3;
+            /** @type {number} */
+            value = 0;
+            /** @type {number} */
+            i = i + 2;
+            for (; i >= 0; i--) {
+                /** @type {number} */
+                value = value << 8 | data[i];
+            }
+            return 1 == rgb ? totalStackCode = totalStackCode + base64Encode(value << 16, 2) + "==" : 2 == rgb && (totalStackCode = totalStackCode + base64Encode(value << 8, 3) + "="), totalStackCode;
+        }
+        /**
+         * @param {string} v
+         * @return {?}
+         */
+        function parseRSAKeyFromString(v) {
+            var t = v.indexOf(";");
+            if (0 > t) {
+                return null;
+            }
+            var m = v.substr(0, t);
+            var cmdargs = v.substr(t + 1);
+            var idx = m.indexOf("=");
+            if (0 > idx) {
+                return null;
+            }
+            var matrix = m.substr(idx + 1);
+            if (idx = cmdargs.indexOf("="), 0 > idx) {
+                return null;
+            }
+            var name = cmdargs.substr(idx + 1);
+            /** @type {!Object} */
+            var result = new Object;
+            return result.n = hexStringToMP(name), result.e = parseInt(matrix, 16), result;
+        }
+        /**
+         * @param {!Array} data
+         * @param {!Object} f
+         * @return {?}
+         */
+        function RSAEncrypt(data, f) {
+            /** @type {!Array} */
+            var itemData = [];
+            /** @type {number} */
+            var location = 42;
+            /** @type {number} */
+            var size = 2 * f.n.size - location;
+            /** @type {number} */
+            var i = 0;
+            for (; i < data.length; i = i + size) {
+                if (i + size >= data.length) {
+                    var m = RSAEncryptBlock(data.slice(i), f, randomNum);
+                    if (m) {
+                        itemData = m.concat(itemData);
+                    }
+                } else {
+                    m = RSAEncryptBlock(data.slice(i, i + size), f, randomNum);
+                    if (m) {
+                        itemData = m.concat(itemData);
+                    }
+                }
+            }
+            var reverseItemData = byteArrayToBase64(itemData);
+            return reverseItemData;
+        }
+        /**
+         * @param {!Array} data
+         * @param {!Object} options
+         * @param {?} x
+         * @return {?}
+         */
+        function RSAEncryptBlock(data, options, x) {
+            var n = options.n;
+            var format = options.e;
+            var y = data.length;
+            /** @type {number} */
+            var max_y = 2 * n.size;
+            /** @type {number} */
+            var h = 42;
+            if (y + h > max_y) {
+                return null;
+            }
+            applyPKCSv2Padding(data, max_y, x);
+            data = data.reverse();
+            var j = byteArrayToMP(data);
+            var d = modularExp(j, format, n);
+            d.size = n.size;
+            var bottoms = mpToByteArray(d);
+            return bottoms = bottoms.reverse();
+        }
+        /**
+         * @return {undefined}
+         */
+        function JSMPnumber() {
+            /** @type {number} */
+            this.size = 1;
+            /** @type {!Array} */
+            this.data = [];
+            /** @type {number} */
+            this.data[0] = 0;
+        }
+        /**
+         * @param {!Object} props
+         * @return {?}
+         */
+        function duplicateMP(props) {
+            var s = new JSMPnumber;
+            return s.size = props.size, s.data = props.data.slice(0), s;
+        }
+        /**
+         * @param {!Object} rows
+         * @return {?}
+         */
+        function byteArrayToMP(rows) {
+            var div = new JSMPnumber;
+            /** @type {number} */
+            var i = 0;
+            var length = rows.length;
+            /** @type {number} */
+            var size = length >> 1;
+            /** @type {number} */
+            i = 0;
+            for (; size > i; i++) {
+                div.data[i] = rows[2 * i] + (rows[1 + 2 * i] << 8);
+            }
+            return length % 2 && (div.data[i++] = rows[length - 1]), div.size = i, div;
+        }
+        /**
+         * @param {!Object} unit
+         * @return {?}
+         */
+        function mpToByteArray(unit) {
+            /** @type {!Array} */
+            var t = [];
+            /** @type {number} */
+            var i = 0;
+            var n = unit.size;
+            /** @type {number} */
+            i = 0;
+            for (; n > i; i++) {
+                /** @type {number} */
+                t[2 * i] = 255 & unit.data[i];
+                /** @type {number} */
+                var testvalue = unit.data[i] >>> 8;
+                /** @type {number} */
+                t[2 * i + 1] = testvalue;
+            }
+            return t;
+        }
+        /**
+         * @param {!Object} e
+         * @param {number} mask
+         * @param {!Object} length
+         * @return {?}
+         */
+        function modularExp(e, mask, length) {
+            /** @type {!Array} */
+            var buffer = [];
+            /** @type {number} */
+            var i = 0;
+            for (; mask > 0;) {
+                /** @type {number} */
+                buffer[i] = 1 & mask;
+                /** @type {number} */
+                mask = mask >>> 1;
+                i++;
+            }
+            var result = duplicateMP(e);
+            /** @type {number} */
+            var j = i - 2;
+            for (; j >= 0; j--) {
+                result = modularMultiply(result, result, length);
+                if (1 == buffer[j]) {
+                    result = modularMultiply(result, e, length);
+                }
+            }
+            return result;
+        }
+        /**
+         * @param {!Object} json
+         * @param {!Object} e
+         * @param {!Object} n
+         * @return {?}
+         */
+        function modularMultiply(json, e, n) {
+            var t = multiplyMP(json, e);
+            var s = divideMP(t, n);
+            return s.r;
+        }
+        /**
+         * @param {!Object} e
+         * @param {!Object} r
+         * @return {?}
+         */
+        function multiplyMP(e, r) {
+            var node = new JSMPnumber;
+            node.size = e.size + r.size;
+            var i;
+            var j;
+            /** @type {number} */
+            i = 0;
+            for (; i < node.size; i++) {
+                /** @type {number} */
+                node.data[i] = 0;
+            }
+            var a = e.data;
+            var b = r.data;
+            var bounds = node.data;
+            if (e == r) {
+                /** @type {number} */
+                i = 0;
+                for (; i < e.size; i++) {
+                    bounds[2 * i] += a[i] * a[i];
+                }
+                /** @type {number} */
+                i = 1;
+                for (; i < e.size; i++) {
+                    /** @type {number} */
+                    j = 0;
+                    for (; i > j; j++) {
+                        bounds[i + j] += 2 * a[i] * a[j];
+                    }
+                }
+            } else {
+                /** @type {number} */
+                i = 0;
+                for (; i < e.size; i++) {
+                    /** @type {number} */
+                    j = 0;
+                    for (; j < r.size; j++) {
+                        bounds[i + j] += a[i] * b[j];
+                    }
+                }
+            }
+            return normalizeJSMP(node), node;
+        }
+        /**
+         * @param {!Object} att
+         * @return {undefined}
+         */
+        function normalizeJSMP(att) {
+            var j;
+            var headerRowHtml;
+            var value;
+            var o;
+            var o_old;
+            value = att.size;
+            /** @type {number} */
+            headerRowHtml = 0;
+            /** @type {number} */
+            j = 0;
+            for (; value > j; j++) {
+                o = att.data[j];
+                o = o + headerRowHtml;
+                o_old = o;
+                /** @type {number} */
+                headerRowHtml = Math.floor(o / 65536);
+                /** @type {number} */
+                o = o - 65536 * headerRowHtml;
+                att.data[j] = o;
+            }
+        }
+        /**
+         * @param {!Object} s
+         * @return {undefined}
+         */
+        function removeLeadingZeroes(s) {
+            /** @type {number} */
+            var p = s.size - 1;
+            for (; p > 0 && 0 == s.data[p--];) {
+                s.size--;
+            }
+        }
+        /**
+         * @param {!Object} r
+         * @param {!Object} t
+         * @return {?}
+         */
+        function divideMP(r, t) {
+            var j = r.size;
+            var len = t.size;
+            var A = t.data[len - 1];
+            var DyMilli = t.data[len - 1] + t.data[len - 2] / 65536;
+            var content = new JSMPnumber;
+            /** @type {number} */
+            content.size = j - len + 1;
+            /** @type {number} */
+            r.data[j] = 0;
+            /** @type {number} */
+            var i = j - 1;
+            for (; i >= len - 1; i--) {
+                /** @type {number} */
+                var name = i - len + 1;
+                /** @type {number} */
+                var fn = Math.floor((65536 * r.data[i + 1] + r.data[i]) / DyMilli);
+                if (fn > 0) {
+                    var result = multiplyAndSubtract(r, fn, t, name);
+                    if (0 > result) {
+                        fn--;
+                        multiplyAndSubtract(r, fn, t, name);
+                    }
+                    for (; result > 0 && r.data[i] >= A;) {
+                        result = multiplyAndSubtract(r, 1, t, name);
+                        if (result > 0) {
+                            fn++;
+                        }
+                    }
+                }
+                /** @type {number} */
+                content.data[name] = fn;
+            }
+            removeLeadingZeroes(r);
+            var params = {
+                "q": content,
+                "r": r
+            };
+            return params;
+        }
+        /**
+         * @param {!Object} result
+         * @param {number} r
+         * @param {!Object} source
+         * @param {number} k
+         * @return {?}
+         */
+        function multiplyAndSubtract(result, r, source, k) {
+            var i;
+            var a = result.data.slice(0);
+            /** @type {number} */
+            var x = 0;
+            var pos = result.data;
+            /** @type {number} */
+            i = 0;
+            for (; i < source.size; i++) {
+                /** @type {number} */
+                var y = x + source.data[i] * r;
+                /** @type {number} */
+                x = y >>> 16;
+                /** @type {number} */
+                y = y - 65536 * x;
+                if (y > pos[i + k]) {
+                    pos[i + k] += 65536 - y;
+                    x++;
+                } else {
+                    pos[i + k] -= y;
+                }
+            }
+            return x > 0 && (pos[i + k] -= x), pos[i + k] < 0 ? (result.data = a.slice(0), -1) : 1;
+        }
+        /**
+         * @param {!Array} value
+         * @param {number} i
+         * @param {?} object
+         * @return {undefined}
+         */
+        function applyPKCSv2Padding(value, i, object) {
+            var v;
+            var bytes = value.length;
+            /** @type {!Array} */
+            var a = [218, 57, 163, 238, 94, 107, 75, 13, 50, 85, 191, 239, 149, 96, 24, 144, 175, 216, 7, 9];
+            /** @type {number} */
+            var l = i - bytes - 40 - 2;
+            /** @type {!Array} */
+            var s = [];
+            /** @type {number} */
+            v = 0;
+            for (; l > v; v++) {
+                /** @type {number} */
+                s[v] = 0;
+            }
+            /** @type {number} */
+            s[l] = 1;
+            /** @type {!Array<?>} */
+            var r = a.concat(s, value);
+            /** @type {!Array} */
+            var values = [];
+            /** @type {number} */
+            v = 0;
+            for (; 20 > v; v++) {
+                /** @type {number} */
+                values[v] = Math.floor(256 * Math.random());
+            }
+            values = SHA1(values.concat(object));
+            var y = MGF(values, i - 21);
+            var b = XORarrays(r, y);
+            var n = MGF(b, 20);
+            var m = XORarrays(values, n);
+            /** @type {!Array} */
+            var d = [];
+            /** @type {number} */
+            d[0] = 0;
+            /** @type {!Array<?>} */
+            d = d.concat(m, b);
+            /** @type {number} */
+            v = 0;
+            for (; v < d.length; v++) {
+                value[v] = d[v];
+            }
+        }
+        /**
+         * @param {!Array} array
+         * @param {number} n
+         * @return {?}
+         */
+        function MGF(array, n) {
+            if (n > 4096) {
+                return null;
+            }
+            var s = array.slice(0);
+            var i = s.length;
+            /** @type {number} */
+            s[i++] = 0;
+            /** @type {number} */
+            s[i++] = 0;
+            /** @type {number} */
+            s[i++] = 0;
+            /** @type {number} */
+            s[i] = 0;
+            /** @type {number} */
+            var capturedGroupIndex = 0;
+            /** @type {!Array} */
+            var a = [];
+            for (; a.length < n;) {
+                /** @type {number} */
+                s[i] = capturedGroupIndex++;
+                /** @type {!Array<?>} */
+                a = a.concat(SHA1(s));
+            }
+            return a.slice(0, n);
+        }
+        /**
+         * @param {!Array} a
+         * @param {!NodeList} b
+         * @return {?}
+         */
+        function XORarrays(a, b) {
+            if (a.length != b.length) {
+                return null;
+            }
+            /** @type {!Array} */
+            var premultRGBA = [];
+            var l = a.length;
+            /** @type {number} */
+            var i = 0;
+            for (; l > i; i++) {
+                /** @type {number} */
+                premultRGBA[i] = a[i] ^ b[i];
+            }
+            return premultRGBA;
+        }
+        /**
+         * @param {string} s
+         * @return {?}
+         */
+        function SHA1(s) {
+            var i;
+            var n = s.slice(0);
+            PadSHA1Input(n);
+            var times = {
+                "A": 1732584193,
+                "B": 4023233417,
+                "C": 2562383102,
+                "D": 271733878,
+                "E": 3285377520
+            };
+            /** @type {number} */
+            i = 0;
+            for (; i < n.length; i = i + 64) {
+                SHA1RoundFunction(times, n, i);
+            }
+            /** @type {!Array} */
+            var nameArgs = [];
+            return wordToBytes(times.A, nameArgs, 0), wordToBytes(times.B, nameArgs, 4), wordToBytes(times.C, nameArgs, 8), wordToBytes(times.D, nameArgs, 12), wordToBytes(times.E, nameArgs, 16), nameArgs;
+        }
+        /**
+         * @param {number} c
+         * @param {!Array} t
+         * @param {number} i
+         * @return {undefined}
+         */
+        function wordToBytes(c, t, i) {
+            var left_count;
+            /** @type {number} */
+            left_count = 3;
+            for (; left_count >= 0; left_count--) {
+                /** @type {number} */
+                t[i + left_count] = 255 & c;
+                /** @type {number} */
+                c = c >>> 8;
+            }
+        }
+        /**
+         * @param {!Object} b
+         * @return {undefined}
+         */
+        function PadSHA1Input(b) {
+            var s;
+            var length = b.length;
+            var i = length;
+            /** @type {number} */
+            var n = length % 64;
+            /** @type {number} */
+            var ms = 55 > n ? 56 : 120;
+            /** @type {number} */
+            b[i++] = 128;
+            /** @type {number} */
+            s = n + 1;
+            for (; ms > s; s++) {
+                /** @type {number} */
+                b[i++] = 0;
+            }
+            /** @type {number} */
+            var wideValue = 8 * length;
+            /** @type {number} */
+            s = 1;
+            for (; 8 > s; s++) {
+                /** @type {number} */
+                b[i + 8 - s] = 255 & wideValue;
+                /** @type {number} */
+                wideValue = wideValue >>> 8;
+            }
+        }
+        /**
+         * @param {!Object} self
+         * @param {!Array} window
+         * @param {number} id
+         * @return {undefined}
+         */
+        function SHA1RoundFunction(self, window, id) {
+            var i;
+            var p;
+            var name;
+            /** @type {number} */
+            var r = 1518500249;
+            /** @type {number} */
+            var s = 1859775393;
+            /** @type {number} */
+            var c = 2400959708;
+            /** @type {number} */
+            var d = 3395469782;
+            /** @type {!Array} */
+            var l = [];
+            var a = self.A;
+            var B = self.B;
+            var C = self.C;
+            var D = self.D;
+            var E = self.E;
+            /** @type {number} */
+            p = 0;
+            /** @type {number} */
+            name = id;
+            for (; 16 > p; p++, name = name + 4) {
+                /** @type {number} */
+                l[p] = window[name] << 24 | window[name + 1] << 16 | window[name + 2] << 8 | window[name + 3] << 0;
+            }
+            /** @type {number} */
+            p = 16;
+            for (; 80 > p; p++) {
+                l[p] = rotateLeft(l[p - 3] ^ l[p - 8] ^ l[p - 14] ^ l[p - 16], 1);
+            }
+            var nativeObjectObject;
+            /** @type {number} */
+            i = 0;
+            for (; 20 > i; i++) {
+                /** @type {number} */
+                nativeObjectObject = rotateLeft(a, 5) + (B & C | ~B & D) + E + l[i] + r & 4294967295;
+                E = D;
+                D = C;
+                C = rotateLeft(B, 30);
+                B = a;
+                /** @type {number} */
+                a = nativeObjectObject;
+            }
+            /** @type {number} */
+            i = 20;
+            for (; 40 > i; i++) {
+                /** @type {number} */
+                nativeObjectObject = rotateLeft(a, 5) + (B ^ C ^ D) + E + l[i] + s & 4294967295;
+                E = D;
+                D = C;
+                C = rotateLeft(B, 30);
+                B = a;
+                /** @type {number} */
+                a = nativeObjectObject;
+            }
+            /** @type {number} */
+            i = 40;
+            for (; 60 > i; i++) {
+                /** @type {number} */
+                nativeObjectObject = rotateLeft(a, 5) + (B & C | B & D | C & D) + E + l[i] + c & 4294967295;
+                E = D;
+                D = C;
+                C = rotateLeft(B, 30);
+                B = a;
+                /** @type {number} */
+                a = nativeObjectObject;
+            }
+            /** @type {number} */
+            i = 60;
+            for (; 80 > i; i++) {
+                /** @type {number} */
+                nativeObjectObject = rotateLeft(a, 5) + (B ^ C ^ D) + E + l[i] + d & 4294967295;
+                E = D;
+                D = C;
+                C = rotateLeft(B, 30);
+                B = a;
+                /** @type {number} */
+                a = nativeObjectObject;
+            }
+            /** @type {number} */
+            self.A = self.A + a & 4294967295;
+            /** @type {number} */
+            self.B = self.B + B & 4294967295;
+            /** @type {number} */
+            self.C = self.C + C & 4294967295;
+            /** @type {number} */
+            self.D = self.D + D & 4294967295;
+            /** @type {number} */
+            self.E = self.E + E & 4294967295;
+        }
+        /**
+         * @param {number} x
+         * @param {number} n
+         * @return {?}
+         */
+        function rotateLeft(x, n) {
+            /** @type {number} */
+            var tt = x >>> 32 - n;
+            /** @type {number} */
+            var MASK = (1 << 32 - n) - 1;
+            /** @type {number} */
+            var sizeIndex = x & MASK;
+            return sizeIndex << n | tt;
+        }
+        /**
+         * @param {string} input
+         * @return {?}
+         */
+        function hexStringToMP(input) {
+            var i;
+            var total_pageviews_raw;
+            /** @type {number} */
+            var length = Math.ceil(input.length / 4);
+            var info = new JSMPnumber;
+            /** @type {number} */
+            info.size = length;
+            /** @type {number} */
+            i = 0;
+            for (; length > i; i++) {
+                total_pageviews_raw = input.substr(4 * i, 4);
+                /** @type {number} */
+                info.data[length - 1 - i] = parseInt(total_pageviews_raw, 16);
+            }
+            return info;
+        }
+
+        var index = PackageNewPwdOnly("11111111");
+        console.log(index);
+
+        var key = parseRSAKeyFromString(Key);
+        console.log(key);
+
+        var previousDottieValue = RSAEncrypt(index, key, randomNum);
+        console.log(previousDottieValue);
+    </script>
+</body>
+
+</html>
