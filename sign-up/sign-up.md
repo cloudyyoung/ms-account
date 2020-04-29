@@ -217,7 +217,8 @@ No web request is made.
 4. Encryption algorithm file [lightweightsignuppackage.js]( lightweightsignuppackage.js)
 5. Encrypted field is called `CipherValue` in content
 6. `SKI` and `Key` can be found in [main-part2.js](main-part2.js)
-7. `CipherValue` is the `password` encrypted: `Encrypt("", "", "newpwd", e)`
+7. `CipherValue` is the `password` encrypted: `Encrypt("", "", "newpwd", password)`
+8. Encryption demo: [pwd-encrypt.html](pwd-encrypt.html)
 
 
 
